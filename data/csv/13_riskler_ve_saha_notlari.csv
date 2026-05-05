@@ -1,0 +1,28 @@
+risk_id,mekan_id,risk_tipi,aciklama,etki,cozum,test_durumu
+risk_001,harput_kalesi,GPS ve güvenlik,Kale çevresinde GPS sapması ve kayalık alan riski olabilir.,Yüksek,Tetikleme noktası güvenli giriş veya seyir alanına alınmalı.,Test edilmedi
+risk_002,harput_ulu_cami,Hassas alan,İbadet alanı olduğu için içerik dili ve kullanıcı davranışı dikkatli olmalı.,Yüksek,Saygılı ve kısa bilgilendirme dili kullanılmalı.,Test edilmedi
+risk_003,alacali_cami,Konum doğrulama,Cami giriş noktası sahada kesinleştirilmeli.,Orta,GPS noktası kapı veya güvenli durma alanına alınmalı.,Test edilmedi
+risk_004,arap_baba_turbesi,Hassas alan,Türbe ve mescit alanında içerik dili hassas olmalı.,Yüksek,"Tarafsız, saygılı ve kaynaklı anlatım kullanılmalı.",Test edilmedi
+risk_005,meryem_ana_kilisesi,Yapı güvenliği,Kilise çevresinde güvenli yaklaşma noktası doğrulanmalı.,Yüksek,Sadece güvenli mesafeden AR içerik gösterilmeli.,Test edilmedi
+risk_006,sarahatun_cami,Hassas alan,Cami çevresinde durma noktası ve ibadet hassasiyeti kontrol edilmeli.,Orta,Kullanıcıyı girişten uzak güvenli noktada tetikle.,Test edilmedi
+risk_007,kursunlu_cami,Konum doğrulama,Koordinat yaklaşık olduğu için giriş noktası doğrulanmalı.,Orta,Sahada GPS noktası güncellenmeli.,Test edilmedi
+risk_008,hoca_hasan_hamami,Erişim,Hamam yapısının erişilebilirliği sahada kontrol edilmeli.,Orta,Güvenli durma noktası seçilmeli.,Test edilmedi
+risk_009,cam_seyir_terasi,Yükseklik,Seyir alanında kenar güvenliği kontrol edilmeli.,Yüksek,Kullanıcı güvenli durma alanında yönlendirilmeli.,Test edilmedi
+risk_010,balakgazi_heykeli,Kalabalık,Seyir alanında kalabalık ve ışık durumu değişebilir.,Orta,Tetikleme yarıçapı 40m tutulmalı.,Test edilmedi
+risk_011,aga_cami,Konum doğrulama,Koordinat yaklaşık olduğu için saha doğrulaması gerekir.,Orta,GPS noktası cami çevresinde güncellenmeli.,Test edilmedi
+risk_012,ahmet_bey_cami,Konum doğrulama,Cami konumu ve erişim noktası sahada doğrulanmalı.,Orta,Saha testi ile güncelle.,Test edilmedi
+risk_013,esadiye_cami,Konum doğrulama,Harput merkez çevresinde kesin konum doğrulaması gerekir.,Orta,Saha GPS ölçümü yapılmalı.,Test edilmedi
+risk_014,meydan_cami,Merkez kalabalığı,Meydan çevresinde kalabalık ve araç hareketi olabilir.,Orta,Güvenli durma noktası belirlenmeli.,Test edilmedi
+risk_015,cimsit_bey_hamami,Erişim,Hamam giriş noktası netleştirilmeli.,Orta,Saha fotoğrafı ve GPS ölçümü alınmalı.,Test edilmedi
+risk_016,kale_hamami,Yıkıntı riski,Kale çevresinde kalıntı ve arkeolojik alan riski olabilir.,Yüksek,Güvenli mesafeden deneyim tasarlanmalı.,Test edilmedi
+risk_017,kale_zindani,Güvenlik,"Kapalı, yer altı veya ışığı düşük alan riski olabilir.",Yüksek,İç alana yönlendirme yapılmamalı; güvenli alan onayı eklenmeli.,Test edilmedi
+risk_018,dabakhane_mescidi,Erişim,Yol ve erişim durumu sahada doğrulanmalı.,Orta,Saha rotası yürüyerek test edilmeli.,Test edilmedi
+risk_019,imam_efendi_turbesi,Hassas alan,Mezarlık ve türbe alanı olduğu için sessiz kullanım gerekir.,Yüksek,Saygılı ve kısa içerik kullanılmalı.,Test edilmedi
+risk_020,mansur_baba_turbesi,Hassas alan,Türbe giriş noktası ve ziyaret hassasiyeti kontrol edilmeli.,Yüksek,Saygılı içerik ve güvenli durma noktası kullanılmalı.,Test edilmedi
+risk_021,musa_kazim_efendi_turbesi,Konum doğrulama,Yaklaşık konum sahada doğrulanmalıdır.,Orta,Saha GPS ölçümü alınmalı.,Test edilmedi
+risk_022,fatih_ahmet_baba_turbesi,Erişim,Türbe yolu ve durma alanı doğrulanmalı.,Orta,Saha yürüyüş testi yapılmalı.,Test edilmedi
+risk_023,anguzu_baba_turbesi,Konum doğrulama,Konum güvenilir harita veya saha ölçümü ile doğrulanmalı.,Orta,GPS noktası güncellenmeli.,Test edilmedi
+risk_024,buzluk_magarasi,Doğal alan güvenliği,"Mağara alanında ışık, zemin ve sıcaklık riski olabilir.",Yüksek,Güvenlik uyarısı zorunlu olmalı; içeri girme yönlendirmesi yapılmamalı.,Test edilmedi
+risk_025,olbe_vadisi,Doğal alan güvenliği,"Patika, internet ve yön bulma riski olabilir.",Yüksek,Offline veri ve güvenlik uyarısı kullanılmalı.,Test edilmedi
+risk_026,surp_hagop_kilisesi,Yapı güvenliği,Kalıntı veya hasarlı yapı riski olabilir.,Yüksek,Sadece güvenli mesafeden AR içerik gösterilmeli.,Test edilmedi
+risk_027,surp_garabet_kilisesi,Yapı güvenliği,Kalıntı ve yaklaşma riski sahada kontrol edilmeli.,Yüksek,Aktif edilmeden önce saha güvenliği doğrulanmalı.,Test edilmedi

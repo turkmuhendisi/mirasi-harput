@@ -1,0 +1,21 @@
+ar_id,mekan_id,gorev_id,icerik_tipi,prefab_adi,pozisyon_tipi,gorunme_kosulu,kaybolma_kosulu,olcek,aktif_mi
+ar_001,harput_kalesi,gorev_001,Karakter,NPC_HarputMuhafiziPrefab,Kamera önü,Görev noktası tetiklenince,Görev kabul edilince,1.0,Evet
+ar_002,harput_kalesi,gorev_001,Ok,ARArrowPrefab,Hedef yönü,Görev kabul edilince,Hedef mekana ulaşınca,1.0,Evet
+ar_003,harput_ulu_cami,gorev_002,Karakter,NPC_UluCamiAlimiPrefab,Kamera önü,Mekana ulaşınca,Bilgi kartı açılınca,1.0,Evet
+ar_004,harput_ulu_cami,gorev_002,Bilgi kartı,InfoCardPrefab,Kamera önü,Karakter diyaloğu bitince,Kullanıcı kapatınca,1.0,Evet
+ar_005,alacali_cami,gorev_003,Karakter,NPC_TasUstasiPrefab,Kamera önü,Mekana ulaşınca,Görev tamamlanınca,1.0,Evet
+ar_006,alacali_cami,gorev_003,Obje,ArchitectureMarkerPrefab,Dünya noktası,İnceleme görevi başlayınca,Görev tamamlanınca,1.0,Evet
+ar_007,arap_baba_turbesi,gorev_004,Karakter,NPC_ArapBabaAnlaticisiPrefab,Kamera önü,Mekana ulaşınca,Soru ekranı açılınca,1.0,Evet
+ar_008,arap_baba_turbesi,gorev_004,Bilgi kartı,InfoCardPrefab,Kamera önü,Diyalog bitince,Soru cevaplanınca,1.0,Evet
+ar_009,meryem_ana_kilisesi,gorev_005,Karakter,NPC_MeryemAnaRehberiPrefab,Kamera önü,Mekana ulaşınca,Rota tamamlanınca,1.0,Evet
+ar_010,meryem_ana_kilisesi,gorev_005,Tamamlama efekti,QuestCompleteEffectPrefab,Kamera önü,Görev tamamlanınca,Animasyon bitince,1.0,Evet
+ar_011,sarahatun_cami,gorev_006,Bilgi kartı,InfoCardPrefab,Kamera önü,Mekana ulaşınca,Kullanıcı kapatınca,1.0,Hayır
+ar_012,kursunlu_cami,gorev_007,Bilgi kartı,InfoCardPrefab,Kamera önü,Mekana ulaşınca,Kullanıcı kapatınca,1.0,Hayır
+ar_013,hoca_hasan_hamami,gorev_008,Karakter,NPC_HamamUstasiPrefab,Kamera önü,Mekana ulaşınca,Görev tamamlanınca,1.0,Hayır
+ar_014,cam_seyir_terasi,gorev_009,Bilgi kartı,InfoCardPrefab,Kamera önü,Mekana ulaşınca,Kullanıcı kapatınca,1.0,Hayır
+ar_015,balakgazi_heykeli,gorev_010,Karakter,NPC_BalakgaziKomutaniPrefab,Kamera önü,Mekana ulaşınca,Bilgi kartı açılınca,1.0,Hayır
+ar_016,kale_zindani,gorev_017,Uyarı paneli,SafetyWarningPrefab,Kamera önü,Mekana ulaşınca,Kullanıcı onaylayınca,1.0,Hayır
+ar_017,buzluk_magarasi,gorev_024,Uyarı paneli,SafetyWarningPrefab,Kamera önü,Mekana ulaşınca,Kullanıcı onaylayınca,1.0,Hayır
+ar_018,olbe_vadisi,gorev_025,Uyarı paneli,SafetyWarningPrefab,Kamera önü,Mekana ulaşınca,Kullanıcı onaylayınca,1.0,Hayır
+ar_019,surp_hagop_kilisesi,gorev_026,Bilgi kartı,InfoCardPrefab,Kamera önü,Mekana ulaşınca,Kullanıcı kapatınca,1.0,Hayır
+ar_020,surp_garabet_kilisesi,gorev_027,Tamamlama efekti,QuestCompleteEffectPrefab,Kamera önü,Görev tamamlanınca,Animasyon bitince,1.0,Hayır

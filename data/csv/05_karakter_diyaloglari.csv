@@ -1,0 +1,33 @@
+diyalog_id,karakter_id,mekan_id,gorev_id,diyalog_tipi,metin,sira_no,seslendirme_var_mi,duygu
+dlg_001,miras_rehberi,harput_kalesi,gorev_001,Karsilama,"Harput'a hoş geldin. Bu rota seni taşların, yapıların ve anlatıların içinde kısa bir tarih yolculuğuna çıkaracak.",1,Hayır,Sakin
+dlg_002,harput_muhafizi,harput_kalesi,gorev_001,Gorev verme,İlk görev kaleden başlar. Ulu Cami yönüne ilerle ve Harput'un mimari hafızasını keşfet.,2,Hayır,Ciddi
+dlg_003,ulu_cami_alimi,harput_ulu_cami,gorev_002,Karsilama,Ulu Cami'ye ulaştın. Bu nokta Harput'un tarihî ve mimari hafızasında önemli bir duraktır.,1,Hayır,Bilge
+dlg_004,ulu_cami_alimi,harput_ulu_cami,gorev_002,Bilgi,Minareyi ve yapının çevresini incele. Sonraki iz seni Alacalı Cami'ye götürecek.,2,Hayır,Öğretici
+dlg_005,tas_ustasi,alacali_cami,gorev_003,Karsilama,Taşın da hafızası vardır. Burada mimari ayrıntıları gözlemleyeceksin.,1,Hayır,Meraklı
+dlg_006,tas_ustasi,alacali_cami,gorev_003,Gorev verme,Çevredeki mimari dokuyu incele ve Arap Baba Türbesi yönüne ilerle.,2,Hayır,Net
+dlg_007,arap_baba_anlaticisi,arap_baba_turbesi,gorev_004,Karsilama,Burası Harput anlatılarının dikkat çeken duraklarından biridir. Sessizce oku ve soruyu cevapla.,1,Hayır,Gizemli
+dlg_008,arap_baba_anlaticisi,arap_baba_turbesi,gorev_004,Gorev verme,Anlatıyı tamamlamak için bilgi kartını aç ve doğru cevabı seç.,2,Hayır,Gizemli
+dlg_009,meryem_ana_rehberi,meryem_ana_kilisesi,gorev_005,Karsilama,Bu durak Harput'un çok katmanlı kültürel mirasını gösterir. Bilgi kartını oku ve ana rotayı tamamla.,1,Hayır,Saygılı
+dlg_010,meryem_ana_rehberi,meryem_ana_kilisesi,gorev_005,Basari,Ana rotayı tamamladın. Harput'un farklı dönemlerine ait izleri takip ettin.,2,Hayır,Olumlu
+dlg_011,sarahatun_anlaticisi,sarahatun_cami,gorev_006,Karsilama,"Sarahatun Cami, Harput'un tarihî dokusunda önemli bir duraktır. Yapının çevresini gözlemle.",1,Hayır,Resmî
+dlg_012,kursunlu_rehberi,kursunlu_cami,gorev_007,Bilgi,"Kurşunlu Cami, geniş rotanın mimari duraklarından biridir. Bilgi kartını oku.",1,Hayır,Sakin
+dlg_013,hamam_ustasi,hoca_hasan_hamami,gorev_008,Karsilama,"Hamamlar yalnızca temizlik alanı değil, sosyal yaşamın da parçasıydı. Bu yapıyı günlük yaşam izleriyle düşün.",1,Hayır,Samimi
+dlg_014,seyir_rehberi,cam_seyir_terasi,gorev_009,Karsilama,Buradan Harput'u geniş açıyla görürsün. Rota boyunca gezdiğin yapıları zihninde birleştir.,1,Hayır,Etkileyici
+dlg_015,balakgazi_komutani,balakgazi_heykeli,gorev_010,Karsilama,Bu durak Harput'un kahramanlık anlatısına açılır. Bilgi kartını oku ve geniş rotaya devam et.,1,Hayır,Güçlü
+dlg_016,merkez_rehberi,aga_cami,gorev_011,Bilgi,"Ağa Cami, merkez çevresindeki kısa bilgi duraklarından biridir. Konumu doğrula ve ilerle.",1,Hayır,Normal
+dlg_017,merkez_rehberi,ahmet_bey_cami,gorev_012,Bilgi,"Ahmet Bey Cami, alternatif rota içinde kısa mimari bilgi noktasıdır. Çevreyi gözlemle.",1,Hayır,Normal
+dlg_018,merkez_rehberi,esadiye_cami,gorev_013,Bilgi,"Esadiye Cami çevresi, Harput merkez dokusunu anlamak için kullanılabilir.",1,Hayır,Normal
+dlg_019,merkez_rehberi,meydan_cami,gorev_014,Karsilama,"Meydan çevresi, Harput'un merkez hissini verir. Burada rota yönünü tekrar kontrol et.",1,Hayır,Normal
+dlg_020,hamam_ustasi,cimsit_bey_hamami,gorev_015,Bilgi,"Cimşit Bey Hamamı, sosyal yaşam ve mimari anlatı için güçlü bir duraktır.",1,Hayır,Samimi
+dlg_021,zindan_golgesi,kale_hamami,gorev_016,Uyari,Kale çevresindeki kalıntılarda güvenli mesafeyi koru. Bilgi kartını yalnızca güvenli alanda aç.,1,Hayır,Uyarıcı
+dlg_022,zindan_golgesi,kale_zindani,gorev_017,Karsilama,Zindan anlatısı gizemlidir ama güvenlik önceliklidir. Sadece açık ve güvenli alandan deneyimi tamamla.,1,Hayır,Ciddi
+dlg_023,mezarlik_rehberi,dabakhane_mescidi,gorev_018,Bilgi,Bu nokta sakin ve saygılı bir anlatım gerektirir. Bilgi kartını kısa şekilde oku.,1,Hayır,Saygılı
+dlg_024,mezarlik_rehberi,imam_efendi_turbesi,gorev_019,Bilgi,Türbe alanlarında sessiz ve dikkatli ol. İçerik yalnızca tarihî bilgilendirme amacı taşır.,1,Hayır,Saygılı
+dlg_025,mezarlik_rehberi,mansur_baba_turbesi,gorev_020,Bilgi,"Mansur Baba Türbesi, Harput'un manevi duraklarından biridir. Kısa bilgi kartını incele.",1,Hayır,Saygılı
+dlg_026,mezarlik_rehberi,musa_kazim_efendi_turbesi,gorev_021,Bilgi,Bu türbe noktası için tarihî bilgi kaynakla doğrulanmalı. Şimdilik kısa rota durağı olarak kullan.,1,Hayır,Saygılı
+dlg_027,mezarlik_rehberi,fatih_ahmet_baba_turbesi,gorev_022,Bilgi,Fatih Ahmet Baba Türbesi çevresinde güvenli erişim noktasını koru ve bilgi kartını oku.,1,Hayır,Saygılı
+dlg_028,mezarlik_rehberi,anguzu_baba_turbesi,gorev_023,Bilgi,"Anguzu Baba Türbesi, geniş rota içinde alternatif manevi duraktır. Konumu sahada doğrulanmalıdır.",1,Hayır,Saygılı
+dlg_029,doga_rehberi,buzluk_magarasi,gorev_024,Uyari,"Buzluk Mağarası ek rota noktasıdır. Zemin, ışık ve güvenlik kontrolü yapılmadan iç deneyim başlatma.",1,Hayır,Uyarıcı
+dlg_030,doga_rehberi,olbe_vadisi,gorev_025,Uyari,Ölbe Vadisi doğal alan olduğu için patika ve internet durumu kontrol edilmelidir.,1,Hayır,Uyarıcı
+dlg_031,kilise_rehberi,surp_hagop_kilisesi,gorev_026,Bilgi,Bu kilise durağında güvenli mesafeyi koru. İçerik kültürel miras bilgilendirmesi için sunulur.,1,Hayır,Saygılı
+dlg_032,kilise_rehberi,surp_garabet_kilisesi,gorev_027,Basari,"Tam kültür rotasını tamamladın. Harput'un mimari, doğal ve çok kültürlü izlerini takip ettin.",1,Hayır,Olumlu

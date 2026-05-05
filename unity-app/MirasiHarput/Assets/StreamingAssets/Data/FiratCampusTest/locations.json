@@ -1,0 +1,32 @@
+{
+  "locations": [
+    {
+      "id": "firat_teknoloji_fakultesi",
+      "name": "Fırat Üniversitesi Teknoloji Fakültesi",
+      "shortDescription": "Kampüs test rotasının başlangıç noktası.",
+      "longDescription": "Bu nokta Miras'ı Harput projesinin GPS, lokasyon tetikleme ve görev akışı testleri için kullanılan kampüs başlangıç noktasıdır.",
+      "latitude": 38.680944,
+      "longitude": 39.195806,
+      "triggerRadiusMeters": 60.0,
+      "npcId": "npc_test_rehber",
+      "relatedQuestId": "quest_firat_teknoloji_baslangic",
+      "imageKey": "firat_teknoloji",
+      "isStartPoint": true,
+      "isFinalPoint": false
+    },
+    {
+      "id": "firat_merkez_kutuphane",
+      "name": "Fırat Üniversitesi Merkez Kütüphanesi",
+      "shortDescription": "Kampüs test rotasının ikinci ve final noktası.",
+      "longDescription": "Bu nokta görev tamamlama, rota ilerleme ve final tetikleme akışını test etmek için kullanılan ikinci kampüs noktasıdır.",
+      "latitude": 38.679546,
+      "longitude": 39.196324,
+      "triggerRadiusMeters": 60.0,
+      "npcId": "npc_test_rehber",
+      "relatedQuestId": "quest_firat_kutuphane_final",
+      "imageKey": "firat_kutuphane",
+      "isStartPoint": false,
+      "isFinalPoint": true
+    }
+  ]
+}

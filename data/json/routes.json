@@ -1,0 +1,62 @@
+[
+  {
+    "rota_id": "harput_ana_rota",
+    "rota_adi": "Harput Ana Tarih Rotası",
+    "rota_aciklamasi": "Harput Kalesi ile başlayıp Meryem Ana Kilisesi ile tamamlanan kısa AR tarih rotası",
+    "tahmini_sure_dk": 60,
+    "toplam_mekan_sayisi": 5,
+    "zorluk": "Kolay",
+    "hedef_kitle": "Genel ziyaretçi",
+    "aktif_mi": true,
+    "baslangic_mekan_id": "harput_kalesi",
+    "bitis_mekan_id": "meryem_ana_kilisesi"
+  },
+  {
+    "rota_id": "harput_tam_rota",
+    "rota_adi": "Harput Tam Kültür Rotası",
+    "rota_aciklamasi": "Harput merkezindeki cami, türbe, hamam, kale, kilise, seyir ve doğal alanları kapsayan geniş rota",
+    "tahmini_sure_dk": 240,
+    "toplam_mekan_sayisi": 27,
+    "zorluk": "Zor",
+    "hedef_kitle": "Deneyimli ziyaretçi",
+    "aktif_mi": false,
+    "baslangic_mekan_id": "harput_kalesi",
+    "bitis_mekan_id": "surp_garabet_kilisesi"
+  },
+  {
+    "rota_id": "harput_mimari_rota",
+    "rota_adi": "Harput Mimari İzler Rotası",
+    "rota_aciklamasi": "Cami, hamam, kale ve zindan yapıları üzerinden mimari izleri anlatan rota",
+    "tahmini_sure_dk": 120,
+    "toplam_mekan_sayisi": 12,
+    "zorluk": "Orta",
+    "hedef_kitle": "Kültür meraklısı",
+    "aktif_mi": false,
+    "baslangic_mekan_id": "harput_ulu_cami",
+    "bitis_mekan_id": "kale_zindani"
+  },
+  {
+    "rota_id": "harput_inanc_rota",
+    "rota_adi": "Harput İnanç ve Kültür Rotası",
+    "rota_aciklamasi": "Cami, türbe, mescit ve kilise yapıları üzerinden Harput'un çok katmanlı kültürel mirasını anlatan rota",
+    "tahmini_sure_dk": 150,
+    "toplam_mekan_sayisi": 15,
+    "zorluk": "Orta",
+    "hedef_kitle": "Kültür ve tarih meraklısı",
+    "aktif_mi": false,
+    "baslangic_mekan_id": "harput_ulu_cami",
+    "bitis_mekan_id": "surp_garabet_kilisesi"
+  },
+  {
+    "rota_id": "harput_dogal_rota",
+    "rota_adi": "Harput Doğal Keşif Rotası",
+    "rota_aciklamasi": "Buzluk Mağarası ve Ölbe Vadisi çevresini kapsayan araçlı veya yürüyüş destekli ek rota",
+    "tahmini_sure_dk": 150,
+    "toplam_mekan_sayisi": 2,
+    "zorluk": "Zor",
+    "hedef_kitle": "Deneyimli ziyaretçi",
+    "aktif_mi": false,
+    "baslangic_mekan_id": "buzluk_magarasi",
+    "bitis_mekan_id": "olbe_vadisi"
+  }
+]

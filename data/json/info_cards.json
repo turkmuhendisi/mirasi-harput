@@ -1,0 +1,272 @@
+[
+  {
+    "bilgi_id": "bilgi_001",
+    "mekan_id": "harput_kalesi",
+    "baslik": "Harput Kalesi",
+    "kisa_metin": "Harput'un en bilinen tarihî simgelerinden biridir.",
+    "detay_metin": "Harput Kalesi, Harput yerleşiminin savunma ve tarihî hafıza noktalarından biridir. Projede başlangıç durağı olarak kullanılır.",
+    "kaynak": "Elazığ İl Kültür ve Turizm Müdürlüğü; Kültür Portalı; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "harput_kalesi.jpg",
+    "kullaniciya_gosterilsin_mi": true
+  },
+  {
+    "bilgi_id": "bilgi_002",
+    "mekan_id": "harput_ulu_cami",
+    "baslik": "Harput Ulu Cami",
+    "kisa_metin": "Harput'un önemli tarihî camilerinden biridir.",
+    "detay_metin": "Ulu Cami, Harput'un mimari ve tarihî kimliğini gösteren ana duraklardan biridir. Eğri minare anlatısı ile görevleştirilebilir.",
+    "kaynak": "Elazığ İl Kültür ve Turizm Müdürlüğü; Kültür Portalı; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "harput_ulu_cami.jpg",
+    "kullaniciya_gosterilsin_mi": true
+  },
+  {
+    "bilgi_id": "bilgi_003",
+    "mekan_id": "alacali_cami",
+    "baslik": "Alacalı Cami",
+    "kisa_metin": "Harput'un mimari izlerini taşıyan tarihî camilerinden biridir.",
+    "detay_metin": "Alacalı Cami, kullanıcıya mimari ayrıntı inceletmek için uygun bir ara görev noktasıdır.",
+    "kaynak": "Elazığ İl Kültür ve Turizm Müdürlüğü; yerel envanter; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "alacali_cami.jpg",
+    "kullaniciya_gosterilsin_mi": true
+  },
+  {
+    "bilgi_id": "bilgi_004",
+    "mekan_id": "arap_baba_turbesi",
+    "baslik": "Arap Baba Türbesi ve Mescidi",
+    "kisa_metin": "Harput anlatıları içinde dikkat çeken türbe ve mescit noktasıdır.",
+    "detay_metin": "Arap Baba Türbesi ve Mescidi, projede hikâyeleştirme ve soru-cevap görevleri için kullanılacak manevi ve tarihî duraktır.",
+    "kaynak": "Kültür Portalı; Elazığ İl Kültür ve Turizm Müdürlüğü; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "arap_baba_turbesi.jpg",
+    "kullaniciya_gosterilsin_mi": true
+  },
+  {
+    "bilgi_id": "bilgi_005",
+    "mekan_id": "meryem_ana_kilisesi",
+    "baslik": "Meryem Ana Kilisesi",
+    "kisa_metin": "Harput'un çok katmanlı kültürel mirasını temsil eden önemli noktalardan biridir.",
+    "detay_metin": "Meryem Ana Kilisesi, Harput'un farklı inanç ve kültür katmanlarını anlatmak için kullanılacak final duraklarından biridir.",
+    "kaynak": "Kültür Portalı; Elazığ İl Kültür ve Turizm Müdürlüğü; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "meryem_ana_kilisesi.jpg",
+    "kullaniciya_gosterilsin_mi": true
+  },
+  {
+    "bilgi_id": "bilgi_006",
+    "mekan_id": "sarahatun_cami",
+    "baslik": "Sarahatun Cami",
+    "kisa_metin": "Harput'un tarihî camilerinden biridir.",
+    "detay_metin": "Sarahatun Cami, genişletilmiş rota içinde tarihî ve mimari bilgi noktası olarak kullanılabilir.",
+    "kaynak": "Elazığ İl Kültür ve Turizm Müdürlüğü; Kültür Portalı; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "sarahatun_cami.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_007",
+    "mekan_id": "kursunlu_cami",
+    "baslik": "Kurşunlu Cami",
+    "kisa_metin": "Harput'taki tarihî camilerden biridir.",
+    "detay_metin": "Kurşunlu Cami, geniş rota içinde kısa mimari bilgi durağı olarak kullanılacaktır.",
+    "kaynak": "Elazığ İl Kültür ve Turizm Müdürlüğü; yerel envanter; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "kursunlu_cami.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_008",
+    "mekan_id": "hoca_hasan_hamami",
+    "baslik": "Hoca Hasan Hamamı",
+    "kisa_metin": "Harput'un sosyal yaşam izlerini taşıyan hamam yapılarından biridir.",
+    "detay_metin": "Hoca Hasan Hamamı, Harput'ta günlük yaşam, temizlik kültürü ve sosyal mekân anlatısı için kullanılabilir.",
+    "kaynak": "Kültür Portalı; Elazığ İl Kültür ve Turizm Müdürlüğü; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "hoca_hasan_hamami.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_009",
+    "mekan_id": "cam_seyir_terasi",
+    "baslik": "Cam Seyir Terası",
+    "kisa_metin": "Harput manzarasını deneyimleten seyir noktasıdır.",
+    "detay_metin": "Cam Seyir Terası, kullanıcının rota boyunca gezdiği noktaları geniş açıyla değerlendirebileceği görsel durak olarak kullanılabilir.",
+    "kaynak": "Elazığ Belediyesi; turizm tanıtım kaynakları; saha gözlemi",
+    "gorsel_dosyasi": "cam_seyir_terasi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_010",
+    "mekan_id": "balakgazi_heykeli",
+    "baslik": "Balakgazi Heykeli",
+    "kisa_metin": "Harput tarih anlatısında kahramanlık ve temsil noktası olarak kullanılabilir.",
+    "detay_metin": "Balakgazi Heykeli, kahramanlık ve tarihî temsil anlatımını destekleyen genişletilmiş rota durağıdır.",
+    "kaynak": "Elazığ Belediyesi; yerel tanıtım kaynakları; saha gözlemi",
+    "gorsel_dosyasi": "balakgazi_heykeli.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_011",
+    "mekan_id": "aga_cami",
+    "baslik": "Ağa Cami",
+    "kisa_metin": "Harput merkez çevresindeki kısa bilgi duraklarından biridir.",
+    "detay_metin": "Ağa Cami, merkez dokusunu destekleyen alternatif cami durağı olarak kullanılabilir.",
+    "kaynak": "Yerel envanter; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "aga_cami.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_012",
+    "mekan_id": "ahmet_bey_cami",
+    "baslik": "Ahmet Bey Cami",
+    "kisa_metin": "Harput'taki alternatif cami duraklarından biridir.",
+    "detay_metin": "Ahmet Bey Cami, geniş rota içinde kısa bilgi ve konum doğrulama noktası olarak kullanılabilir.",
+    "kaynak": "Yerel envanter; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "ahmet_bey_cami.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_013",
+    "mekan_id": "esadiye_cami",
+    "baslik": "Esadiye Cami",
+    "kisa_metin": "Harput merkez çevresindeki alternatif tarihî camilerden biridir.",
+    "detay_metin": "Esadiye Cami, merkez çevresinde rota sürekliliği sağlayan kısa bilgi durağı olarak kullanılacaktır.",
+    "kaynak": "Yerel envanter; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "esadiye_cami.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_014",
+    "mekan_id": "meydan_cami",
+    "baslik": "Meydan Cami",
+    "kisa_metin": "Harput merkez/meydan çevresinde değerlendirilecek cami duraklarından biridir.",
+    "detay_metin": "Meydan Cami, kullanıcının merkez dokusunu anlaması için kısa anlatı noktası olarak kullanılabilir.",
+    "kaynak": "Yerel envanter; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "meydan_cami.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_015",
+    "mekan_id": "cimsit_bey_hamami",
+    "baslik": "Cimşit Bey Hamamı",
+    "kisa_metin": "Osmanlı dönemi sosyal yaşamını anlatmak için uygun hamam yapılarından biridir.",
+    "detay_metin": "Cimşit Bey Hamamı, hamam kültürü ve tarihî sosyal yaşam anlatısı için genişletilmiş rota durağıdır.",
+    "kaynak": "Kültür Portalı; Elazığ İl Kültür ve Turizm Müdürlüğü; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "cimsit_bey_hamami.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_016",
+    "mekan_id": "kale_hamami",
+    "baslik": "Kale Hamamı",
+    "kisa_metin": "Kale çevresindeki hamam kalıntısı veya tarihî yapı durağıdır.",
+    "detay_metin": "Kale Hamamı, kale çevresindeki gündelik yaşam izlerini anlatmak için kullanılabilir. Konum ve erişim sahada doğrulanmalıdır.",
+    "kaynak": "Yerel envanter; saha gözlemi; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "kale_hamami.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_017",
+    "mekan_id": "kale_zindani",
+    "baslik": "Kale Zindanı",
+    "kisa_metin": "Kale içi gizem ve güvenlik temalı görev noktasıdır.",
+    "detay_metin": "Kale Zindanı, oyunlaştırma açısından güçlüdür; ancak yalnızca güvenli alandan deneyim tasarlanmalıdır.",
+    "kaynak": "Saha gözlemi; yerel envanter; güvenlik doğrulaması",
+    "gorsel_dosyasi": "kale_zindani.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_018",
+    "mekan_id": "dabakhane_mescidi",
+    "baslik": "Dabakhane Mescidi",
+    "kisa_metin": "Alternatif tarihî mescit noktasıdır.",
+    "detay_metin": "Dabakhane Mescidi, genişletilmiş rota içinde kısa ve saygılı bilgi durağı olarak kullanılabilir.",
+    "kaynak": "Yerel envanter; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "dabakhane_mescidi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_019",
+    "mekan_id": "imam_efendi_turbesi",
+    "baslik": "İmam Efendi Türbesi",
+    "kisa_metin": "Harput'taki manevi rota duraklarından biridir.",
+    "detay_metin": "İmam Efendi Türbesi, türbe alanı hassasiyeti nedeniyle kısa, tarafsız ve saygılı anlatımla kullanılmalıdır.",
+    "kaynak": "Yerel envanter; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "imam_efendi_turbesi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_020",
+    "mekan_id": "mansur_baba_turbesi",
+    "baslik": "Mansur Baba Türbesi",
+    "kisa_metin": "Harput'taki türbe duraklarından biridir.",
+    "detay_metin": "Mansur Baba Türbesi, manevi ve kültürel rota içinde kısa bilgi kartı ile temsil edilebilir.",
+    "kaynak": "Yerel envanter; harita kaydı; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "mansur_baba_turbesi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_021",
+    "mekan_id": "musa_kazim_efendi_turbesi",
+    "baslik": "Musa Kazım Efendi Türbesi",
+    "kisa_metin": "Meteris Mezarlığı çevresinde değerlendirilen türbe noktalarından biridir.",
+    "detay_metin": "Musa Kazım Efendi Türbesi, türbe ve mezarlık alanı hassasiyeti nedeniyle sessiz ve kısa anlatımla kullanılmalıdır.",
+    "kaynak": "Yerel kaynaklar; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "musa_kazim_efendi_turbesi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_022",
+    "mekan_id": "fatih_ahmet_baba_turbesi",
+    "baslik": "Fatih Ahmet Baba Türbesi",
+    "kisa_metin": "Harput çevresindeki alternatif türbe noktalarından biridir.",
+    "detay_metin": "Fatih Ahmet Baba Türbesi, geniş rota içinde manevi durak olarak kullanılabilir.",
+    "kaynak": "Yerel envanter; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "fatih_ahmet_baba_turbesi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_023",
+    "mekan_id": "anguzu_baba_turbesi",
+    "baslik": "Anguzu Baba Türbesi",
+    "kisa_metin": "Harput çevresindeki alternatif türbe noktalarından biridir.",
+    "detay_metin": "Anguzu Baba Türbesi, genişletilmiş rotada kısa bilgi kartı ile yer alabilir. Konum doğrulaması gerekir.",
+    "kaynak": "Yerel envanter; saha levhası doğrulanacak",
+    "gorsel_dosyasi": "anguzu_baba_turbesi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_024",
+    "mekan_id": "buzluk_magarasi",
+    "baslik": "Buzluk Mağarası",
+    "kisa_metin": "Harput çevresindeki doğal ve tarihî ilgi noktalarından biridir.",
+    "detay_metin": "Buzluk Mağarası, doğal alan ve güvenlik uyarısı gerektiren ek rota noktası olarak değerlendirilmelidir.",
+    "kaynak": "Kültür Portalı; turizm tanıtım kaynakları; saha güvenlik gözlemi",
+    "gorsel_dosyasi": "buzluk_magarasi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_025",
+    "mekan_id": "olbe_vadisi",
+    "baslik": "Ölbe Vadisi",
+    "kisa_metin": "Harput çevresindeki doğal alanlardan biridir.",
+    "detay_metin": "Ölbe Vadisi, ek rota ve doğal keşif noktası olarak kullanılabilir; yürüyüş güvenliği ve erişim kontrol edilmelidir.",
+    "kaynak": "Yerel turizm kaynakları; saha gözlemi",
+    "gorsel_dosyasi": "olbe_vadisi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_026",
+    "mekan_id": "surp_hagop_kilisesi",
+    "baslik": "Surp Hagop Kilisesi",
+    "kisa_metin": "Harput'un çok kültürlü mirasını temsil eden kilise duraklarından biridir.",
+    "detay_metin": "Surp Hagop Kilisesi, güvenli mesafeden kültürel miras bilgilendirmesi için kullanılmalıdır.",
+    "kaynak": "Yerel envanter; kültürel miras kaynakları; saha doğrulaması",
+    "gorsel_dosyasi": "surp_hagop_kilisesi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  },
+  {
+    "bilgi_id": "bilgi_027",
+    "mekan_id": "surp_garabet_kilisesi",
+    "baslik": "Surp Garabet Kilisesi / Kızıl Kilise",
+    "kisa_metin": "Harput'un çok kültürlü mirasını temsil eden kilise duraklarından biridir.",
+    "detay_metin": "Surp Garabet Kilisesi, çok kültürlü tarih anlatımında final veya geniş rota durağı olarak kullanılabilir.",
+    "kaynak": "Yerel envanter; kültürel miras kaynakları; saha doğrulaması",
+    "gorsel_dosyasi": "surp_garabet_kilisesi.jpg",
+    "kullaniciya_gosterilsin_mi": false
+  }
+]

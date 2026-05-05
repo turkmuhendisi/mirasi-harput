@@ -1,0 +1,28 @@
+test_id,test_tarihi,test_edilen_mekan_id,cihaz,gps_dogrulugu,ar_gorunurluk,ui_okunabilirlik,sorunlar,aksiyon
+test_001,,harput_kalesi,Samsung Galaxy S24,,,,,"GPS, güvenlik ve AR görünürlük testi yapılacak"
+test_002,,harput_ulu_cami,Samsung Galaxy S24,,,,,İbadet alanı hassasiyeti ve durma noktası test edilecek
+test_003,,alacali_cami,Samsung Galaxy S24,,,,,Mimari detay görevi ve kamera açısı test edilecek
+test_004,,arap_baba_turbesi,Samsung Galaxy S24,,,,,"Türbe hassasiyeti, GPS ve soru görevi test edilecek"
+test_005,,meryem_ana_kilisesi,Samsung Galaxy S24,,,,,"Güvenli mesafe, kamera görüşü ve final görevi test edilecek"
+test_006,,sarahatun_cami,Samsung Galaxy S24,,,,,Geniş rota için durma noktası test edilecek
+test_007,,kursunlu_cami,Samsung Galaxy S24,,,,,GPS noktası doğrulanacak
+test_008,,hoca_hasan_hamami,Samsung Galaxy S24,,,,,Erişim ve görsel uygunluk test edilecek
+test_009,,cam_seyir_terasi,Samsung Galaxy S24,,,,,"Güneş, yükseklik ve UI okunabilirlik test edilecek"
+test_010,,balakgazi_heykeli,Samsung Galaxy S24,,,,,Kalabalık ve tetikleme yarıçapı test edilecek
+test_011,,aga_cami,Samsung Galaxy S24,,,,,Konum doğrulaması yapılacak
+test_012,,ahmet_bey_cami,Samsung Galaxy S24,,,,,Konum ve erişim doğrulanacak
+test_013,,esadiye_cami,Samsung Galaxy S24,,,,,Konum ve merkez rota uyumu test edilecek
+test_014,,meydan_cami,Samsung Galaxy S24,,,,,Kalabalık ve güvenli durma alanı test edilecek
+test_015,,cimsit_bey_hamami,Samsung Galaxy S24,,,,,Hamam giriş noktası doğrulanacak
+test_016,,kale_hamami,Samsung Galaxy S24,,,,,Güvenli mesafe ve yapı riski test edilecek
+test_017,,kale_zindani,Samsung Galaxy S24,,,,,Güvenlik uyarısı ve deneyim sınırı test edilecek
+test_018,,dabakhane_mescidi,Samsung Galaxy S24,,,,,Yol ve erişim test edilecek
+test_019,,imam_efendi_turbesi,Samsung Galaxy S24,,,,,Sessiz kullanım ve durma noktası test edilecek
+test_020,,mansur_baba_turbesi,Samsung Galaxy S24,,,,,Türbe girişinde GPS doğrulanacak
+test_021,,musa_kazim_efendi_turbesi,Samsung Galaxy S24,,,,,Konum doğrulaması yapılacak
+test_022,,fatih_ahmet_baba_turbesi,Samsung Galaxy S24,,,,,Yol ve türbe giriş noktası test edilecek
+test_023,,anguzu_baba_turbesi,Samsung Galaxy S24,,,,,Konum ve erişim doğrulanacak
+test_024,,buzluk_magarasi,Samsung Galaxy S24,,,,,"Güvenlik, zemin, ışık ve GPS test edilecek"
+test_025,,olbe_vadisi,Samsung Galaxy S24,,,,,"Patika, internet ve güvenlik test edilecek"
+test_026,,surp_hagop_kilisesi,Samsung Galaxy S24,,,,,Güvenli mesafe ve yapı riski test edilecek
+test_027,,surp_garabet_kilisesi,Samsung Galaxy S24,,,,,Güvenli mesafe ve final noktası test edilecek

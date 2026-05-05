@@ -1,0 +1,9 @@
+rozet_id,rozet_adi,rozet_aciklamasi,kazanma_kosulu,ikon_dosyasi,nadirlik,aktif_mi
+rozet_kasif,Harput Kâşifi,İlk görevi tamamlayan kullanıcıya verilir.,gorev_001 tamamlanınca,badge_kasif.png,Normal,Evet
+rozet_tarih_yolcusu,Tarih Yolcusu,Rotada en az 3 görevi tamamlayan kullanıcıya verilir.,3 görev tamamlanınca,badge_tarih_yolcusu.png,Normal,Evet
+rozet_bilge_ziyaretci,Bilge Ziyaretçi,Soru-cevap görevini doğru tamamlayan kullanıcıya verilir.,Herhangi bir soruyu doğru cevaplayınca,badge_bilge.png,Özel,Evet
+rozet_miras_koruyucusu,Miras Koruyucusu,Ana rotayı tamamlayan kullanıcıya verilir.,harput_ana_rota tamamlanınca,badge_miras_koruyucusu.png,Final,Evet
+rozet_rota_ustasi,Rota Ustası,Genişletilmiş rotada Balakgazi Heykeli görevine ulaşan kullanıcıya verilir.,gorev_010 tamamlanınca,badge_rota_ustasi.png,Özel,Hayır
+rozet_gizemli_iz,Gizemli İz,Kale Zindanı görevini güvenli şekilde tamamlayan kullanıcıya verilir.,gorev_017 tamamlanınca,badge_gizemli_iz.png,Özel,Hayır
+rozet_doga_kasifi,Doğa Kâşifi,Buzluk Mağarası güvenlik görevini tamamlayan kullanıcıya verilir.,gorev_024 tamamlanınca,badge_doga_kasifi.png,Özel,Hayır
+rozet_tam_rota,Tam Rota Tamamlandı,Harput Tam Kültür Rotasını tamamlayan kullanıcıya verilir.,harput_tam_rota tamamlanınca,badge_tam_rota.png,Final,Hayır

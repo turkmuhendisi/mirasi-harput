@@ -1,0 +1,79 @@
+{
+  "quests": [
+    {
+      "id": "quest_harput_kalesi_baslangic",
+      "title": "Harput'a İlk Bakış",
+      "description": "Harput Kalesi'nde rotayı başlat ve çevredeki tarihî dokuyu gözlemle.",
+      "objectiveText": "Harput Kalesi konumuna yaklaş ve başlangıç bilgisini aç.",
+      "locationId": "harput_kalesi",
+      "nextLocationId": "ulu_cami",
+      "rewardPoint": 50,
+      "badgeId": "badge_rota_baslangic",
+      "npcDialogueStart": "Harput rotasına hoş geldin. İlk durağımız kale; buradan bütün hikâyeyi okumaya başlayacağız.",
+      "npcDialogueComplete": "Başlangıç tamamlandı. Şimdi Ulu Cami yönüne ilerleyelim.",
+      "questionText": "Harput rotasının başlangıç durağı hangisidir?",
+      "correctAnswer": "Harput Kalesi",
+      "wrongAnswers": ["Buzluk Mağarası", "Arap Baba Türbesi", "Sarahatun Camii"]
+    },
+    {
+      "id": "quest_ulu_cami_ilerle",
+      "title": "Ulu Cami'ye İlerle",
+      "description": "Kale durağından sonra Ulu Cami çevresine ulaş.",
+      "objectiveText": "Ulu Cami tetikleme alanına gir.",
+      "locationId": "ulu_cami",
+      "nextLocationId": "sarahatun_camii",
+      "rewardPoint": 60,
+      "badgeId": "badge_ulu_cami",
+      "npcDialogueStart": "Ulu Cami durağı, Harput'un tarihî sürekliliğini anlatmak için iyi bir eşik.",
+      "npcDialogueComplete": "Ulu Cami görevi tamamlandı. Sırada Sarahatun Camii var.",
+      "questionText": "Bu görev hangi lokasyonda tamamlanır?",
+      "correctAnswer": "Ulu Cami",
+      "wrongAnswers": ["Harput Kalesi", "Buzluk Mağarası", "Arap Baba Türbesi"]
+    },
+    {
+      "id": "quest_sarahatun_bilgi_sorusu",
+      "title": "Sarahatun Bilgi Sorusu",
+      "description": "Sarahatun Camii hakkında kısa bir bilgi sorusunu yanıtla.",
+      "objectiveText": "Sarahatun Camii konumunda bilgi sorusunu doğru cevapla.",
+      "locationId": "sarahatun_camii",
+      "nextLocationId": "arap_baba_turbesi",
+      "rewardPoint": 75,
+      "badgeId": "badge_bilgi_sorusu",
+      "npcDialogueStart": "Bu durakta küçük bir bilgi kontrolü yapacağız.",
+      "npcDialogueComplete": "Doğru cevap. Harput anlatısında bir sonraki keşif durağına geçebiliriz.",
+      "questionText": "Sarahatun Camii görevi hangi rota aşamasından sonra gelir?",
+      "correctAnswer": "Ulu Cami",
+      "wrongAnswers": ["Buzluk Mağarası", "Arap Baba Türbesi", "Final durağı"]
+    },
+    {
+      "id": "quest_arap_baba_kesif",
+      "title": "Arap Baba Türbesi Keşfi",
+      "description": "Arap Baba Türbesi çevresindeki anlatı noktasını keşfet.",
+      "objectiveText": "Arap Baba Türbesi yakınında keşif bilgisini aç.",
+      "locationId": "arap_baba_turbesi",
+      "nextLocationId": "buzluk_magarasi",
+      "rewardPoint": 80,
+      "badgeId": "badge_kesif",
+      "npcDialogueStart": "Türbe durağında Harput'un ziyaret kültürüne kısa bir bakış atacağız.",
+      "npcDialogueComplete": "Keşif tamamlandı. Final için Buzluk Mağarası'na ilerleyelim.",
+      "questionText": "Arap Baba Türbesi görevinden sonra hangi durak gelir?",
+      "correctAnswer": "Buzluk Mağarası",
+      "wrongAnswers": ["Harput Kalesi", "Ulu Cami", "Sarahatun Camii"]
+    },
+    {
+      "id": "quest_buzluk_final",
+      "title": "Buzluk Mağarası Finali",
+      "description": "Rotanın final durağına ulaş ve geziyi tamamla.",
+      "objectiveText": "Buzluk Mağarası konumunda final bilgisini aç.",
+      "locationId": "buzluk_magarasi",
+      "nextLocationId": "",
+      "rewardPoint": 100,
+      "badgeId": "badge_rota_tamamlandi",
+      "npcDialogueStart": "Final durağına yaklaştın. Harput çevresinin doğal mirasını da rotaya ekliyoruz.",
+      "npcDialogueComplete": "Tebrikler, prototip Harput rotasını tamamladın.",
+      "questionText": "Bu rotanın final durağı hangisidir?",
+      "correctAnswer": "Buzluk Mağarası",
+      "wrongAnswers": ["Harput Kalesi", "Ulu Cami", "Sarahatun Camii"]
+    }
+  ]
+}

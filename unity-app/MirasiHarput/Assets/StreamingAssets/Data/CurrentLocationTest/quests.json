@@ -1,0 +1,42 @@
+{
+  "quests": [
+    {
+      "id": "quest_current_location_start",
+      "title": "Mevcut Konum Testine Başla",
+      "description": "Bu görev, bulunduğun yerde GPS konumunun alındığını ve lokasyon tetikleme sisteminin çalıştığını test eder.",
+      "objectiveText": "Mevcut konumunun algılandığını kontrol et ve görevi tamamla.",
+      "locationId": "current_test_start",
+      "nextLocationId": "current_test_final",
+      "rewardPoint": 10,
+      "badgeId": "badge_current_test_basladi",
+      "npcDialogueStart": "Hoş geldin. Bu test modu, Harput'a gitmeden sistemin konum ve görev akışını bulunduğun yerde denemek için hazırlandı.",
+      "npcDialogueComplete": "İlk test noktası başarıyla tamamlandı. Şimdi rota ilerleme ve final görev akışını test edeceğiz.",
+      "questionText": "Bu test modunun amacı nedir?",
+      "correctAnswer": "Mevcut konumda GPS ve görev akışını test etmek",
+      "wrongAnswers": [
+        "Harput verilerini silmek",
+        "ARCore'u kapatmak",
+        "Android izinlerini kaldırmak"
+      ]
+    },
+    {
+      "id": "quest_current_location_final",
+      "title": "Mevcut Konum Testini Tamamla",
+      "description": "Bu görev, rota ilerleme, final tetikleme, skor ve rozet sistemini test eder.",
+      "objectiveText": "Final görevini tamamlayarak mevcut konum test rotasını bitir.",
+      "locationId": "current_test_final",
+      "nextLocationId": "",
+      "rewardPoint": 20,
+      "badgeId": "badge_current_test_tamamlandi",
+      "npcDialogueStart": "Final test noktasına ulaştın. Şimdi skor, rozet ve rota tamamlama akışını kontrol ediyoruz.",
+      "npcDialogueComplete": "Mevcut konum test rotası tamamlandı. Aynı altyapı HarputProduction ortamında gerçek Harput rotasıyla çalışabilir.",
+      "questionText": "Harput'a gidildiğinde hangi environment seçilmeli?",
+      "correctAnswer": "HarputProduction",
+      "wrongAnswers": [
+        "CurrentLocationTest",
+        "AndroidManifest",
+        "QuestDebugOnly"
+      ]
+    }
+  ]
+}

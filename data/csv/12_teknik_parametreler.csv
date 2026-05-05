@@ -1,0 +1,16 @@
+parametre_key,deger,birim,aciklama,degistirilebilir_mi
+default_trigger_radius,30,metre,Varsayılan mekan tetikleme yarıçapı,Evet
+quest_complete_radius,25,metre,Görev tamamlama için hedef mekana yaklaşma mesafesi,Evet
+gps_update_interval,3,saniye,GPS konum güncelleme aralığı,Evet
+max_dialogue_length,250,karakter,Mobil ekranda gösterilecek maksimum diyalog uzunluğu,Evet
+default_reward_point,100,puan,Standart görev puanı,Evet
+question_reward_point,50,puan,Doğru cevap verilen soru puanı,Evet
+ar_arrow_scale,1.0,oran,AR ok varsayılan ölçek değeri,Evet
+ar_arrow_visible,1,bool,Görev sırasında AR yön oku gösterilsin mi,Evet
+use_audio_dialogue,0,bool,İlk sürümde seslendirme kullanılacak mı,Evet
+save_progress_local,1,bool,Kullanıcı ilerlemesi telefonda lokal kaydedilsin mi,Evet
+use_backend,0,bool,MVP aşamasında backend kullanılacak mı,Evet
+minimum_route_point_count,3,adet,MVP için minimum mekan sayısı,Hayır
+active_route_id,harput_ana_rota,string,İlk çalışacak rota kimliği,Evet
+field_test_device,Samsung Galaxy S24,string,Ana saha test cihazı,Hayır
+offline_mode,1,bool,İlk prototipte internet gerektirmeyen kullanım,Evet

@@ -1,0 +1,122 @@
+[
+  {
+    "parametre_id": "progress_001",
+    "parametre_adi": "aktif_rota_id",
+    "veri_tipi": "string",
+    "varsayilan_deger": "harput_ana_rota",
+    "kayit_yeri": "Local",
+    "aciklama": "Kullanıcının aktif rotasını tutar."
+  },
+  {
+    "parametre_id": "progress_002",
+    "parametre_adi": "aktif_gorev_id",
+    "veri_tipi": "string",
+    "varsayilan_deger": "gorev_001",
+    "kayit_yeri": "Local",
+    "aciklama": "Kullanıcının o anda hangi görevde olduğunu tutar."
+  },
+  {
+    "parametre_id": "progress_003",
+    "parametre_adi": "tamamlanan_gorevler",
+    "veri_tipi": "list",
+    "varsayilan_deger": "[]",
+    "kayit_yeri": "Local",
+    "aciklama": "Kullanıcının tamamladığı görevlerin listesini tutar."
+  },
+  {
+    "parametre_id": "progress_004",
+    "parametre_adi": "toplam_puan",
+    "veri_tipi": "int",
+    "varsayilan_deger": 0,
+    "kayit_yeri": "Local",
+    "aciklama": "Kullanıcının toplam puanını tutar."
+  },
+  {
+    "parametre_id": "progress_005",
+    "parametre_adi": "kazanilan_rozetler",
+    "veri_tipi": "list",
+    "varsayilan_deger": "[]",
+    "kayit_yeri": "Local",
+    "aciklama": "Kullanıcının kazandığı rozetleri tutar."
+  },
+  {
+    "parametre_id": "progress_006",
+    "parametre_adi": "rota_tamamlandi_mi",
+    "veri_tipi": "bool",
+    "varsayilan_deger": false,
+    "kayit_yeri": "Local",
+    "aciklama": "Ana rotanın tamamlanıp tamamlanmadığını tutar."
+  },
+  {
+    "parametre_id": "progress_007",
+    "parametre_adi": "tam_rota_tamamlandi_mi",
+    "veri_tipi": "bool",
+    "varsayilan_deger": false,
+    "kayit_yeri": "Local",
+    "aciklama": "Tam kültür rotasının tamamlanıp tamamlanmadığını tutar."
+  },
+  {
+    "parametre_id": "progress_008",
+    "parametre_adi": "son_konum_latitude",
+    "veri_tipi": "float",
+    "varsayilan_deger": 0,
+    "kayit_yeri": "Local",
+    "aciklama": "Kullanıcının son bilinen enlem bilgisini tutar."
+  },
+  {
+    "parametre_id": "progress_009",
+    "parametre_adi": "son_konum_longitude",
+    "veri_tipi": "float",
+    "varsayilan_deger": 0,
+    "kayit_yeri": "Local",
+    "aciklama": "Kullanıcının son bilinen boylam bilgisini tutar."
+  },
+  {
+    "parametre_id": "progress_010",
+    "parametre_adi": "ilk_acilis_mi",
+    "veri_tipi": "bool",
+    "varsayilan_deger": true,
+    "kayit_yeri": "Local",
+    "aciklama": "Uygulamanın ilk kez açılıp açılmadığını kontrol eder."
+  },
+  {
+    "parametre_id": "progress_011",
+    "parametre_adi": "toplam_gorev_sayisi",
+    "veri_tipi": "int",
+    "varsayilan_deger": 5,
+    "kayit_yeri": "Local",
+    "aciklama": "Ana rotadaki toplam görev sayısını tutar."
+  },
+  {
+    "parametre_id": "progress_012",
+    "parametre_adi": "tam_rota_gorev_sayisi",
+    "veri_tipi": "int",
+    "varsayilan_deger": 27,
+    "kayit_yeri": "Local",
+    "aciklama": "Tam rotadaki toplam görev sayısını tutar."
+  },
+  {
+    "parametre_id": "progress_013",
+    "parametre_adi": "ilerleme_yuzdesi",
+    "veri_tipi": "float",
+    "varsayilan_deger": 0,
+    "kayit_yeri": "Local",
+    "aciklama": "Kullanıcının rota ilerleme yüzdesini tutar."
+  },
+  {
+    "parametre_id": "progress_014",
+    "parametre_adi": "son_saha_test_tarihi",
+    "veri_tipi": "string",
+    "varsayilan_deger": "",
+    "kayit_yeri": "Local",
+    "aciklama": "Son saha test tarihini tutar."
+  },
+  {
+    "parametre_id": "progress_015",
+    "parametre_adi": "ses_acik_mi",
+    "veri_tipi": "bool",
+    "varsayilan_deger": false,
+    "kayit_yeri": "Local",
+    "aciklama": "Seslendirme aktiflik durumunu tutar."
+  }
+]

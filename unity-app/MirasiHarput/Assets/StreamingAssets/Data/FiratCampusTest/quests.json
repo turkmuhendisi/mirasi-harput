@@ -1,0 +1,42 @@
+{
+  "quests": [
+    {
+      "id": "quest_firat_teknoloji_baslangic",
+      "title": "Kampüs Testine Başla",
+      "description": "Teknoloji Fakültesi noktasına ulaştın. Bu görev, GPS tetikleme ve görev başlatma sisteminin doğru çalıştığını test eder.",
+      "objectiveText": "Teknoloji Fakültesi çevresinde konumunun doğru algılandığını kontrol et ve görevi tamamla.",
+      "locationId": "firat_teknoloji_fakultesi",
+      "nextLocationId": "firat_merkez_kutuphane",
+      "rewardPoint": 10,
+      "badgeId": "badge_kampus_test_basladi",
+      "npcDialogueStart": "Hoş geldin. Bu rota Harput deneyimini sahaya çıkmadan önce test etmek için hazırlandı. İlk görevimiz konum tetiklemenin çalıştığını doğrulamak.",
+      "npcDialogueComplete": "Güzel. İlk konum başarıyla tetiklendi. Şimdi Kütüphane noktasına ilerleyerek rota geçişini test edelim.",
+      "questionText": "Bu test rotasının amacı nedir?",
+      "correctAnswer": "GPS ve görev akışını sahada test etmek",
+      "wrongAnswers": [
+        "AR karakter modelini değiştirmek",
+        "Android manifest dosyasını silmek",
+        "Harput verilerini kalıcı olarak değiştirmek"
+      ]
+    },
+    {
+      "id": "quest_firat_kutuphane_final",
+      "title": "Kampüs Test Rotasını Tamamla",
+      "description": "Merkez Kütüphane noktasına ulaştın. Bu görev rota ilerleme ve final tamamlama sisteminin doğru çalıştığını test eder.",
+      "objectiveText": "Kütüphane noktasında görevi tamamlayarak iki mekanlık test rotasını bitir.",
+      "locationId": "firat_merkez_kutuphane",
+      "nextLocationId": "",
+      "rewardPoint": 20,
+      "badgeId": "badge_kampus_test_tamamlandi",
+      "npcDialogueStart": "İkinci noktaya ulaştın. Şimdi rota finali, görev tamamlama, skor ve rozet sistemini kontrol edeceğiz.",
+      "npcDialogueComplete": "Test rotası tamamlandı. Artık aynı altyapı HarputProduction verisiyle gerçek Harput rotasında kullanılabilir.",
+      "questionText": "Bu testten sonra Harput verisine geçmek için ne yapılmalı?",
+      "correctAnswer": "Aktif environment HarputProduction yapılmalı",
+      "wrongAnswers": [
+        "Tüm C# scriptleri yeniden yazılmalı",
+        "GPS modülü silinmeli",
+        "ARCore devre dışı bırakılmalı"
+      ]
+    }
+  ]
+}

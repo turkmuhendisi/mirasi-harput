@@ -1,0 +1,74 @@
+{
+  "locations": [
+    {
+      "id": "harput_kalesi",
+      "name": "Harput Kalesi",
+      "shortDescription": "Harput'un yüksek kayalıkları üzerinde yer alan tarihî kale.",
+      "longDescription": "Harput Kalesi, bölgenin savunma belleğini ve geniş ova manzarasını bir araya getiren ana duraklardan biridir. Prototip rotada başlangıç noktası olarak kullanılır.",
+      "latitude": 38.703448,
+      "longitude": 39.257222,
+      "triggerRadiusMeters": 45.0,
+      "npcId": "rehber_harput",
+      "relatedQuestId": "quest_harput_kalesi_baslangic",
+      "imageKey": "harput_kalesi",
+      "isStartPoint": true,
+      "isFinalPoint": false
+    },
+    {
+      "id": "ulu_cami",
+      "name": "Ulu Cami",
+      "shortDescription": "Harput'un en bilinen tarihî ibadet yapılarından biri.",
+      "longDescription": "Ulu Cami, Harput yerleşiminin kültürel sürekliliğini anlatmak için rotanın ikinci durağı olarak kullanılır. Bu prototip verisi daha sonra doğrulanmış içerikle güncellenecek.",
+      "latitude": 38.704164,
+      "longitude": 39.259243,
+      "triggerRadiusMeters": 35.0,
+      "npcId": "rehber_harput",
+      "relatedQuestId": "quest_ulu_cami_ilerle",
+      "imageKey": "ulu_cami",
+      "isStartPoint": false,
+      "isFinalPoint": false
+    },
+    {
+      "id": "sarahatun_camii",
+      "name": "Sarahatun Camii",
+      "shortDescription": "Harput dokusu içinde önemli bir cami durağı.",
+      "longDescription": "Sarahatun Camii, mimari ve yerel tarih anlatımı için soru-cevap görevine bağlanan örnek bir rota noktasıdır.",
+      "latitude": 38.704777,
+      "longitude": 39.260132,
+      "triggerRadiusMeters": 35.0,
+      "npcId": "sarahatun_anlatici",
+      "relatedQuestId": "quest_sarahatun_bilgi_sorusu",
+      "imageKey": "sarahatun_camii",
+      "isStartPoint": false,
+      "isFinalPoint": false
+    },
+    {
+      "id": "arap_baba_turbesi",
+      "name": "Arap Baba Türbesi",
+      "shortDescription": "Harput'un ziyaret edilen türbe duraklarından biri.",
+      "longDescription": "Arap Baba Türbesi, keşif ve anlatı odaklı görevler için kullanılan örnek bir lokasyondur.",
+      "latitude": 38.705412,
+      "longitude": 39.261418,
+      "triggerRadiusMeters": 35.0,
+      "npcId": "arap_baba_rehberi",
+      "relatedQuestId": "quest_arap_baba_kesif",
+      "imageKey": "arap_baba_turbesi",
+      "isStartPoint": false,
+      "isFinalPoint": false
+    },
+    {
+      "id": "buzluk_magarasi",
+      "name": "Buzluk Mağarası",
+      "shortDescription": "Harput çevresindeki doğal ve tarihî gezi noktası.",
+      "longDescription": "Buzluk Mağarası, prototip rotanın final durağıdır. Doğal miras ve Harput çevresi anlatımı için final görevine bağlanır.",
+      "latitude": 38.710989,
+      "longitude": 39.250309,
+      "triggerRadiusMeters": 55.0,
+      "npcId": "final_rehberi",
+      "relatedQuestId": "quest_buzluk_final",
+      "imageKey": "buzluk_magarasi",
+      "isStartPoint": false,
+      "isFinalPoint": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "routeId": "firat_kampus_test_rotasi",
+      "routeName": "Fırat Kampüs Test Rotası",
+      "orderedLocationIds": [
+        "firat_teknoloji_fakultesi",
+        "firat_merkez_kutuphane"
+      ]
+    }
+  ]
+}

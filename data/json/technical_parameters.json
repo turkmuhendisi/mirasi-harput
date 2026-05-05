@@ -1,0 +1,107 @@
+[
+  {
+    "parametre_key": "default_trigger_radius",
+    "deger": 30,
+    "birim": "metre",
+    "aciklama": "Varsayılan mekan tetikleme yarıçapı",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "quest_complete_radius",
+    "deger": 25,
+    "birim": "metre",
+    "aciklama": "Görev tamamlama için hedef mekana yaklaşma mesafesi",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "gps_update_interval",
+    "deger": 3,
+    "birim": "saniye",
+    "aciklama": "GPS konum güncelleme aralığı",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "max_dialogue_length",
+    "deger": 250,
+    "birim": "karakter",
+    "aciklama": "Mobil ekranda gösterilecek maksimum diyalog uzunluğu",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "default_reward_point",
+    "deger": 100,
+    "birim": "puan",
+    "aciklama": "Standart görev puanı",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "question_reward_point",
+    "deger": 50,
+    "birim": "puan",
+    "aciklama": "Doğru cevap verilen soru puanı",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "ar_arrow_scale",
+    "deger": 1.0,
+    "birim": "oran",
+    "aciklama": "AR ok varsayılan ölçek değeri",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "ar_arrow_visible",
+    "deger": 1,
+    "birim": "bool",
+    "aciklama": "Görev sırasında AR yön oku gösterilsin mi",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "use_audio_dialogue",
+    "deger": 0,
+    "birim": "bool",
+    "aciklama": "İlk sürümde seslendirme kullanılacak mı",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "save_progress_local",
+    "deger": 1,
+    "birim": "bool",
+    "aciklama": "Kullanıcı ilerlemesi telefonda lokal kaydedilsin mi",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "use_backend",
+    "deger": 0,
+    "birim": "bool",
+    "aciklama": "MVP aşamasında backend kullanılacak mı",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "minimum_route_point_count",
+    "deger": 3,
+    "birim": "adet",
+    "aciklama": "MVP için minimum mekan sayısı",
+    "degistirilebilir_mi": false
+  },
+  {
+    "parametre_key": "active_route_id",
+    "deger": "harput_ana_rota",
+    "birim": "string",
+    "aciklama": "İlk çalışacak rota kimliği",
+    "degistirilebilir_mi": true
+  },
+  {
+    "parametre_key": "field_test_device",
+    "deger": "Samsung Galaxy S24",
+    "birim": "string",
+    "aciklama": "Ana saha test cihazı",
+    "degistirilebilir_mi": false
+  },
+  {
+    "parametre_key": "offline_mode",
+    "deger": 1,
+    "birim": "bool",
+    "aciklama": "İlk prototipte internet gerektirmeyen kullanım",
+    "degistirilebilir_mi": true
+  }
+]

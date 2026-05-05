@@ -1,0 +1,40 @@
+dosya_id,dosya_adi,dosya_tipi,ilgili_mekan_id,ilgili_karakter_id,kaynak,lisans_durumu,unity_klasoru,durum
+media_001,harput_kalesi.jpg,Görsel,harput_kalesi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_002,harput_ulu_cami.jpg,Görsel,harput_ulu_cami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_003,alacali_cami.jpg,Görsel,alacali_cami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_004,arap_baba_turbesi.jpg,Görsel,arap_baba_turbesi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_005,meryem_ana_kilisesi.jpg,Görsel,meryem_ana_kilisesi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_006,sarahatun_cami.jpg,Görsel,sarahatun_cami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_007,kursunlu_cami.jpg,Görsel,kursunlu_cami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_008,hoca_hasan_hamami.jpg,Görsel,hoca_hasan_hamami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_009,cam_seyir_terasi.jpg,Görsel,cam_seyir_terasi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_010,balakgazi_heykeli.jpg,Görsel,balakgazi_heykeli,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_011,aga_cami.jpg,Görsel,aga_cami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_012,ahmet_bey_cami.jpg,Görsel,ahmet_bey_cami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_013,esadiye_cami.jpg,Görsel,esadiye_cami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_014,meydan_cami.jpg,Görsel,meydan_cami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_015,cimsit_bey_hamami.jpg,Görsel,cimsit_bey_hamami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_016,kale_hamami.jpg,Görsel,kale_hamami,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_017,kale_zindani.jpg,Görsel,kale_zindani,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_018,dabakhane_mescidi.jpg,Görsel,dabakhane_mescidi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_019,imam_efendi_turbesi.jpg,Görsel,imam_efendi_turbesi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_020,mansur_baba_turbesi.jpg,Görsel,mansur_baba_turbesi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_021,musa_kazim_efendi_turbesi.jpg,Görsel,musa_kazim_efendi_turbesi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_022,fatih_ahmet_baba_turbesi.jpg,Görsel,fatih_ahmet_baba_turbesi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_023,anguzu_baba_turbesi.jpg,Görsel,anguzu_baba_turbesi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_024,buzluk_magarasi.jpg,Görsel,buzluk_magarasi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_025,olbe_vadisi.jpg,Görsel,olbe_vadisi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_026,surp_hagop_kilisesi.jpg,Görsel,surp_hagop_kilisesi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_027,surp_garabet_kilisesi.jpg,Görsel,surp_garabet_kilisesi,,Kendi çekimim,Kendi üretim,Assets/Art/Locations/,Eksik
+media_028,npc_miras_rehberi.png,Karakter görseli,,miras_rehberi,Üretilecek,Kendi üretim,Assets/Art/Characters/,Eksik
+media_029,npc_harput_muhafizi.png,Karakter görseli,,harput_muhafizi,Üretilecek,Kendi üretim,Assets/Art/Characters/,Eksik
+media_030,npc_ulu_cami_alimi.png,Karakter görseli,,ulu_cami_alimi,Üretilecek,Kendi üretim,Assets/Art/Characters/,Eksik
+media_031,npc_tas_ustasi.png,Karakter görseli,,tas_ustasi,Üretilecek,Kendi üretim,Assets/Art/Characters/,Eksik
+media_032,npc_arap_baba_anlaticisi.png,Karakter görseli,,arap_baba_anlaticisi,Üretilecek,Kendi üretim,Assets/Art/Characters/,Eksik
+media_033,npc_meryem_ana_rehberi.png,Karakter görseli,,meryem_ana_rehberi,Üretilecek,Kendi üretim,Assets/Art/Characters/,Eksik
+media_034,badge_kasif.png,İkon,,,Üretilecek,Kendi üretim,Assets/Art/Icons/,Eksik
+media_035,badge_tarih_yolcusu.png,İkon,,,Üretilecek,Kendi üretim,Assets/Art/Icons/,Eksik
+media_036,badge_bilge.png,İkon,,,Üretilecek,Kendi üretim,Assets/Art/Icons/,Eksik
+media_037,badge_miras_koruyucusu.png,İkon,,,Üretilecek,Kendi üretim,Assets/Art/Icons/,Eksik
+media_038,badge_tam_rota.png,İkon,,,Üretilecek,Kendi üretim,Assets/Art/Icons/,Eksik
+media_039,ar_arrow_model.glb,3D Model,,,Üretilecek,Kendi üretim,Assets/Prefabs/AR/,Eksik

@@ -1,0 +1,74 @@
+[
+  {
+    "rozet_id": "rozet_kasif",
+    "rozet_adi": "Harput Kâşifi",
+    "rozet_aciklamasi": "İlk görevi tamamlayan kullanıcıya verilir.",
+    "kazanma_kosulu": "gorev_001 tamamlanınca",
+    "ikon_dosyasi": "badge_kasif.png",
+    "nadirlik": "Normal",
+    "aktif_mi": true
+  },
+  {
+    "rozet_id": "rozet_tarih_yolcusu",
+    "rozet_adi": "Tarih Yolcusu",
+    "rozet_aciklamasi": "Rotada en az 3 görevi tamamlayan kullanıcıya verilir.",
+    "kazanma_kosulu": "3 görev tamamlanınca",
+    "ikon_dosyasi": "badge_tarih_yolcusu.png",
+    "nadirlik": "Normal",
+    "aktif_mi": true
+  },
+  {
+    "rozet_id": "rozet_bilge_ziyaretci",
+    "rozet_adi": "Bilge Ziyaretçi",
+    "rozet_aciklamasi": "Soru-cevap görevini doğru tamamlayan kullanıcıya verilir.",
+    "kazanma_kosulu": "Herhangi bir soruyu doğru cevaplayınca",
+    "ikon_dosyasi": "badge_bilge.png",
+    "nadirlik": "Özel",
+    "aktif_mi": true
+  },
+  {
+    "rozet_id": "rozet_miras_koruyucusu",
+    "rozet_adi": "Miras Koruyucusu",
+    "rozet_aciklamasi": "Ana rotayı tamamlayan kullanıcıya verilir.",
+    "kazanma_kosulu": "harput_ana_rota tamamlanınca",
+    "ikon_dosyasi": "badge_miras_koruyucusu.png",
+    "nadirlik": "Final",
+    "aktif_mi": true
+  },
+  {
+    "rozet_id": "rozet_rota_ustasi",
+    "rozet_adi": "Rota Ustası",
+    "rozet_aciklamasi": "Genişletilmiş rotada Balakgazi Heykeli görevine ulaşan kullanıcıya verilir.",
+    "kazanma_kosulu": "gorev_010 tamamlanınca",
+    "ikon_dosyasi": "badge_rota_ustasi.png",
+    "nadirlik": "Özel",
+    "aktif_mi": false
+  },
+  {
+    "rozet_id": "rozet_gizemli_iz",
+    "rozet_adi": "Gizemli İz",
+    "rozet_aciklamasi": "Kale Zindanı görevini güvenli şekilde tamamlayan kullanıcıya verilir.",
+    "kazanma_kosulu": "gorev_017 tamamlanınca",
+    "ikon_dosyasi": "badge_gizemli_iz.png",
+    "nadirlik": "Özel",
+    "aktif_mi": false
+  },
+  {
+    "rozet_id": "rozet_doga_kasifi",
+    "rozet_adi": "Doğa Kâşifi",
+    "rozet_aciklamasi": "Buzluk Mağarası güvenlik görevini tamamlayan kullanıcıya verilir.",
+    "kazanma_kosulu": "gorev_024 tamamlanınca",
+    "ikon_dosyasi": "badge_doga_kasifi.png",
+    "nadirlik": "Özel",
+    "aktif_mi": false
+  },
+  {
+    "rozet_id": "rozet_tam_rota",
+    "rozet_adi": "Tam Rota Tamamlandı",
+    "rozet_aciklamasi": "Harput Tam Kültür Rotasını tamamlayan kullanıcıya verilir.",
+    "kazanma_kosulu": "harput_tam_rota tamamlanınca",
+    "ikon_dosyasi": "badge_tam_rota.png",
+    "nadirlik": "Final",
+    "aktif_mi": false
+  }
+]

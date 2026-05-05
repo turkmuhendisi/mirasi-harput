@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "routeId": "current_location_test_rotasi",
+      "routeName": "Mevcut Konum Test Rotası",
+      "orderedLocationIds": [
+        "current_test_start",
+        "current_test_final"
+      ]
+    }
+  ]
+}

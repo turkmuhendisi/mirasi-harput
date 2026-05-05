@@ -1,0 +1,15 @@
+{
+  "routes": [
+    {
+      "routeId": "harput_tarihi_rota",
+      "routeName": "Harput Tarihî Gezi Rotası",
+      "orderedLocationIds": [
+        "harput_kalesi",
+        "ulu_cami",
+        "sarahatun_camii",
+        "arap_baba_turbesi",
+        "buzluk_magarasi"
+      ]
+    }
+  ]
+}

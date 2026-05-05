@@ -1,0 +1,245 @@
+[
+  {
+    "risk_id": "risk_001",
+    "mekan_id": "harput_kalesi",
+    "risk_tipi": "GPS ve güvenlik",
+    "aciklama": "Kale çevresinde GPS sapması ve kayalık alan riski olabilir.",
+    "etki": "Yüksek",
+    "cozum": "Tetikleme noktası güvenli giriş veya seyir alanına alınmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_002",
+    "mekan_id": "harput_ulu_cami",
+    "risk_tipi": "Hassas alan",
+    "aciklama": "İbadet alanı olduğu için içerik dili ve kullanıcı davranışı dikkatli olmalı.",
+    "etki": "Yüksek",
+    "cozum": "Saygılı ve kısa bilgilendirme dili kullanılmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_003",
+    "mekan_id": "alacali_cami",
+    "risk_tipi": "Konum doğrulama",
+    "aciklama": "Cami giriş noktası sahada kesinleştirilmeli.",
+    "etki": "Orta",
+    "cozum": "GPS noktası kapı veya güvenli durma alanına alınmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_004",
+    "mekan_id": "arap_baba_turbesi",
+    "risk_tipi": "Hassas alan",
+    "aciklama": "Türbe ve mescit alanında içerik dili hassas olmalı.",
+    "etki": "Yüksek",
+    "cozum": "Tarafsız, saygılı ve kaynaklı anlatım kullanılmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_005",
+    "mekan_id": "meryem_ana_kilisesi",
+    "risk_tipi": "Yapı güvenliği",
+    "aciklama": "Kilise çevresinde güvenli yaklaşma noktası doğrulanmalı.",
+    "etki": "Yüksek",
+    "cozum": "Sadece güvenli mesafeden AR içerik gösterilmeli.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_006",
+    "mekan_id": "sarahatun_cami",
+    "risk_tipi": "Hassas alan",
+    "aciklama": "Cami çevresinde durma noktası ve ibadet hassasiyeti kontrol edilmeli.",
+    "etki": "Orta",
+    "cozum": "Kullanıcıyı girişten uzak güvenli noktada tetikle.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_007",
+    "mekan_id": "kursunlu_cami",
+    "risk_tipi": "Konum doğrulama",
+    "aciklama": "Koordinat yaklaşık olduğu için giriş noktası doğrulanmalı.",
+    "etki": "Orta",
+    "cozum": "Sahada GPS noktası güncellenmeli.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_008",
+    "mekan_id": "hoca_hasan_hamami",
+    "risk_tipi": "Erişim",
+    "aciklama": "Hamam yapısının erişilebilirliği sahada kontrol edilmeli.",
+    "etki": "Orta",
+    "cozum": "Güvenli durma noktası seçilmeli.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_009",
+    "mekan_id": "cam_seyir_terasi",
+    "risk_tipi": "Yükseklik",
+    "aciklama": "Seyir alanında kenar güvenliği kontrol edilmeli.",
+    "etki": "Yüksek",
+    "cozum": "Kullanıcı güvenli durma alanında yönlendirilmeli.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_010",
+    "mekan_id": "balakgazi_heykeli",
+    "risk_tipi": "Kalabalık",
+    "aciklama": "Seyir alanında kalabalık ve ışık durumu değişebilir.",
+    "etki": "Orta",
+    "cozum": "Tetikleme yarıçapı 40m tutulmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_011",
+    "mekan_id": "aga_cami",
+    "risk_tipi": "Konum doğrulama",
+    "aciklama": "Koordinat yaklaşık olduğu için saha doğrulaması gerekir.",
+    "etki": "Orta",
+    "cozum": "GPS noktası cami çevresinde güncellenmeli.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_012",
+    "mekan_id": "ahmet_bey_cami",
+    "risk_tipi": "Konum doğrulama",
+    "aciklama": "Cami konumu ve erişim noktası sahada doğrulanmalı.",
+    "etki": "Orta",
+    "cozum": "Saha testi ile güncelle.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_013",
+    "mekan_id": "esadiye_cami",
+    "risk_tipi": "Konum doğrulama",
+    "aciklama": "Harput merkez çevresinde kesin konum doğrulaması gerekir.",
+    "etki": "Orta",
+    "cozum": "Saha GPS ölçümü yapılmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_014",
+    "mekan_id": "meydan_cami",
+    "risk_tipi": "Merkez kalabalığı",
+    "aciklama": "Meydan çevresinde kalabalık ve araç hareketi olabilir.",
+    "etki": "Orta",
+    "cozum": "Güvenli durma noktası belirlenmeli.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_015",
+    "mekan_id": "cimsit_bey_hamami",
+    "risk_tipi": "Erişim",
+    "aciklama": "Hamam giriş noktası netleştirilmeli.",
+    "etki": "Orta",
+    "cozum": "Saha fotoğrafı ve GPS ölçümü alınmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_016",
+    "mekan_id": "kale_hamami",
+    "risk_tipi": "Yıkıntı riski",
+    "aciklama": "Kale çevresinde kalıntı ve arkeolojik alan riski olabilir.",
+    "etki": "Yüksek",
+    "cozum": "Güvenli mesafeden deneyim tasarlanmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_017",
+    "mekan_id": "kale_zindani",
+    "risk_tipi": "Güvenlik",
+    "aciklama": "Kapalı, yer altı veya ışığı düşük alan riski olabilir.",
+    "etki": "Yüksek",
+    "cozum": "İç alana yönlendirme yapılmamalı; güvenli alan onayı eklenmeli.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_018",
+    "mekan_id": "dabakhane_mescidi",
+    "risk_tipi": "Erişim",
+    "aciklama": "Yol ve erişim durumu sahada doğrulanmalı.",
+    "etki": "Orta",
+    "cozum": "Saha rotası yürüyerek test edilmeli.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_019",
+    "mekan_id": "imam_efendi_turbesi",
+    "risk_tipi": "Hassas alan",
+    "aciklama": "Mezarlık ve türbe alanı olduğu için sessiz kullanım gerekir.",
+    "etki": "Yüksek",
+    "cozum": "Saygılı ve kısa içerik kullanılmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_020",
+    "mekan_id": "mansur_baba_turbesi",
+    "risk_tipi": "Hassas alan",
+    "aciklama": "Türbe giriş noktası ve ziyaret hassasiyeti kontrol edilmeli.",
+    "etki": "Yüksek",
+    "cozum": "Saygılı içerik ve güvenli durma noktası kullanılmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_021",
+    "mekan_id": "musa_kazim_efendi_turbesi",
+    "risk_tipi": "Konum doğrulama",
+    "aciklama": "Yaklaşık konum sahada doğrulanmalıdır.",
+    "etki": "Orta",
+    "cozum": "Saha GPS ölçümü alınmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_022",
+    "mekan_id": "fatih_ahmet_baba_turbesi",
+    "risk_tipi": "Erişim",
+    "aciklama": "Türbe yolu ve durma alanı doğrulanmalı.",
+    "etki": "Orta",
+    "cozum": "Saha yürüyüş testi yapılmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_023",
+    "mekan_id": "anguzu_baba_turbesi",
+    "risk_tipi": "Konum doğrulama",
+    "aciklama": "Konum güvenilir harita veya saha ölçümü ile doğrulanmalı.",
+    "etki": "Orta",
+    "cozum": "GPS noktası güncellenmeli.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_024",
+    "mekan_id": "buzluk_magarasi",
+    "risk_tipi": "Doğal alan güvenliği",
+    "aciklama": "Mağara alanında ışık, zemin ve sıcaklık riski olabilir.",
+    "etki": "Yüksek",
+    "cozum": "Güvenlik uyarısı zorunlu olmalı; içeri girme yönlendirmesi yapılmamalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_025",
+    "mekan_id": "olbe_vadisi",
+    "risk_tipi": "Doğal alan güvenliği",
+    "aciklama": "Patika, internet ve yön bulma riski olabilir.",
+    "etki": "Yüksek",
+    "cozum": "Offline veri ve güvenlik uyarısı kullanılmalı.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_026",
+    "mekan_id": "surp_hagop_kilisesi",
+    "risk_tipi": "Yapı güvenliği",
+    "aciklama": "Kalıntı veya hasarlı yapı riski olabilir.",
+    "etki": "Yüksek",
+    "cozum": "Sadece güvenli mesafeden AR içerik gösterilmeli.",
+    "test_durumu": "Test edilmedi"
+  },
+  {
+    "risk_id": "risk_027",
+    "mekan_id": "surp_garabet_kilisesi",
+    "risk_tipi": "Yapı güvenliği",
+    "aciklama": "Kalıntı ve yaklaşma riski sahada kontrol edilmeli.",
+    "etki": "Yüksek",
+    "cozum": "Aktif edilmeden önce saha güvenliği doğrulanmalı.",
+    "test_durumu": "Test edilmedi"
+  }
+]

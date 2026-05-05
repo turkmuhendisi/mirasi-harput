@@ -1,0 +1,33 @@
+rota_id,sira_no,mekan_id,onceki_mekan_id,sonraki_mekan_id,iki_nokta_arasi_mesafe_m,yurume_suresi_dk,yonlendirme_notu,ar_ok_gosterilsin_mi
+harput_tam_rota,1,harput_kalesi,,harput_ulu_cami,347,5,Harput Kalesi başlangıç noktasıdır. Ulu Cami yönüne ilerle.,Evet
+harput_tam_rota,2,harput_ulu_cami,harput_kalesi,alacali_cami,587,8,Ulu Cami'den sonra Alacalı Cami yönüne ilerle.,Evet
+harput_tam_rota,3,alacali_cami,harput_ulu_cami,arap_baba_turbesi,104,1,Alacalı Cami sonrası Arap Baba Türbesi yönüne ilerle.,Evet
+harput_tam_rota,4,arap_baba_turbesi,alacali_cami,meryem_ana_kilisesi,768,10,Arap Baba Türbesi sonrası Meryem Ana Kilisesi yönüne ilerle.,Evet
+harput_tam_rota,5,meryem_ana_kilisesi,arap_baba_turbesi,sarahatun_cami,422,6,Meryem Ana Kilisesi sonrası Sarahatun Cami yönüne ilerle.,Evet
+harput_tam_rota,6,sarahatun_cami,meryem_ana_kilisesi,kursunlu_cami,46,1,Sarahatun Cami sonrası Kurşunlu Cami yönüne ilerle.,Evet
+harput_tam_rota,7,kursunlu_cami,sarahatun_cami,hoca_hasan_hamami,28,1,Kurşunlu Cami sonrası Hoca Hasan Hamamı yönüne ilerle.,Evet
+harput_tam_rota,8,hoca_hasan_hamami,kursunlu_cami,cam_seyir_terasi,215,3,Hamam çevresinden Cam Seyir Terası yönüne ilerle.,Evet
+harput_tam_rota,9,cam_seyir_terasi,hoca_hasan_hamami,balakgazi_heykeli,34,1,Cam Seyir Terası sonrası Balakgazi Heykeli yönüne ilerle.,Evet
+harput_tam_rota,10,balakgazi_heykeli,cam_seyir_terasi,aga_cami,317,4,Balakgazi Heykeli sonrası Harput merkez yönüne ilerle.,Evet
+harput_tam_rota,11,aga_cami,balakgazi_heykeli,ahmet_bey_cami,44,1,Ağa Cami sonrası Ahmet Bey Cami yönüne ilerle.,Evet
+harput_tam_rota,12,ahmet_bey_cami,aga_cami,esadiye_cami,44,1,Ahmet Bey Cami sonrası Esadiye Cami yönüne ilerle.,Evet
+harput_tam_rota,13,esadiye_cami,ahmet_bey_cami,meydan_cami,65,1,Esadiye Cami sonrası Meydan Cami yönüne ilerle.,Evet
+harput_tam_rota,14,meydan_cami,esadiye_cami,cimsit_bey_hamami,25,1,Meydan Cami sonrası Cimşit Bey Hamamı yönüne ilerle.,Evet
+harput_tam_rota,15,cimsit_bey_hamami,meydan_cami,kale_hamami,379,5,Cimşit Bey Hamamı sonrası Kale Hamamı yönüne ilerle.,Evet
+harput_tam_rota,16,kale_hamami,cimsit_bey_hamami,kale_zindani,67,1,Kale Hamamı sonrası Kale Zindanı yönüne ilerle.,Evet
+harput_tam_rota,17,kale_zindani,kale_hamami,dabakhane_mescidi,254,3,Kale Zindanı sonrası Dabakhane Mescidi yönüne ilerle.,Evet
+harput_tam_rota,18,dabakhane_mescidi,kale_zindani,imam_efendi_turbesi,587,8,Dabakhane Mescidi sonrası İmam Efendi Türbesi yönüne ilerle.,Evet
+harput_tam_rota,19,imam_efendi_turbesi,dabakhane_mescidi,mansur_baba_turbesi,70,1,İmam Efendi Türbesi sonrası Mansur Baba Türbesi yönüne ilerle.,Evet
+harput_tam_rota,20,mansur_baba_turbesi,imam_efendi_turbesi,musa_kazim_efendi_turbesi,89,1,Mansur Baba Türbesi sonrası Musa Kazım Efendi Türbesi yönüne ilerle.,Evet
+harput_tam_rota,21,musa_kazim_efendi_turbesi,mansur_baba_turbesi,fatih_ahmet_baba_turbesi,613,8,Musa Kazım Efendi Türbesi sonrası Fatih Ahmet Baba Türbesi yönüne ilerle.,Evet
+harput_tam_rota,22,fatih_ahmet_baba_turbesi,musa_kazim_efendi_turbesi,anguzu_baba_turbesi,532,7,Fatih Ahmet Baba Türbesi sonrası Anguzu Baba Türbesi yönüne ilerle.,Evet
+harput_tam_rota,23,anguzu_baba_turbesi,fatih_ahmet_baba_turbesi,buzluk_magarasi,4117,55,Anguzu Baba Türbesi sonrası Buzluk Mağarası araçlı ek rota olarak değerlendirilir.,Hayır
+harput_tam_rota,24,buzluk_magarasi,anguzu_baba_turbesi,olbe_vadisi,3820,51,Buzluk Mağarası sonrası Ölbe Vadisi yönüne araçlı veya kontrollü rota ile ilerle.,Hayır
+harput_tam_rota,25,olbe_vadisi,buzluk_magarasi,surp_hagop_kilisesi,1750,23,Ölbe Vadisi sonrası Surp Hagop Kilisesi yönüne geçiş saha doğrulaması gerektirir.,Hayır
+harput_tam_rota,26,surp_hagop_kilisesi,olbe_vadisi,surp_garabet_kilisesi,142,2,Surp Hagop Kilisesi sonrası Surp Garabet Kilisesi yönüne ilerle.,Evet
+harput_tam_rota,27,surp_garabet_kilisesi,surp_hagop_kilisesi,,0,0,Tam rota final noktasıdır.,Hayır
+harput_ana_rota,1,harput_kalesi,,harput_ulu_cami,347,5,Harput Kalesi başlangıç noktasıdır. Ulu Cami yönüne ilerle.,Evet
+harput_ana_rota,2,harput_ulu_cami,harput_kalesi,alacali_cami,587,8,Ulu Cami sonrası Alacalı Cami yönüne ilerle.,Evet
+harput_ana_rota,3,alacali_cami,harput_ulu_cami,arap_baba_turbesi,104,1,Alacalı Cami sonrası Arap Baba Türbesi yönüne ilerle.,Evet
+harput_ana_rota,4,arap_baba_turbesi,alacali_cami,meryem_ana_kilisesi,768,10,Arap Baba Türbesi sonrası Meryem Ana Kilisesi yönüne ilerle.,Evet
+harput_ana_rota,5,meryem_ana_kilisesi,arap_baba_turbesi,,0,0,Ana rota final noktasıdır.,Hayır

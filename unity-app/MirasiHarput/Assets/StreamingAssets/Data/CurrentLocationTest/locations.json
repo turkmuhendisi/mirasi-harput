@@ -1,0 +1,32 @@
+{
+  "locations": [
+    {
+      "id": "current_test_start",
+      "name": "Mevcut Konum Test Başlangıcı",
+      "shortDescription": "Bulunduğun yerde GPS ve görev tetikleme testinin başlangıç noktası.",
+      "longDescription": "Bu nokta, cihazın o anki GPS konumu kullanılarak runtime'da oluşturulan test başlangıç noktasıdır.",
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "triggerRadiusMeters": 100.0,
+      "npcId": "npc_test_rehber",
+      "relatedQuestId": "quest_current_location_start",
+      "imageKey": "current_location_start",
+      "isStartPoint": true,
+      "isFinalPoint": false
+    },
+    {
+      "id": "current_test_final",
+      "name": "Mevcut Konum Test Finali",
+      "shortDescription": "Bulunduğun yerde rota ilerleme ve final görev test noktası.",
+      "longDescription": "Bu nokta, mevcut konuma yakın küçük bir sanal offset ile oluşturulan final test noktasıdır.",
+      "latitude": 0.0,
+      "longitude": 0.0,
+      "triggerRadiusMeters": 100.0,
+      "npcId": "npc_test_rehber",
+      "relatedQuestId": "quest_current_location_final",
+      "imageKey": "current_location_final",
+      "isStartPoint": false,
+      "isFinalPoint": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+parametre_id,parametre_adi,veri_tipi,varsayilan_deger,kayit_yeri,aciklama
+progress_001,aktif_rota_id,string,harput_ana_rota,Local,Kullanıcının aktif rotasını tutar.
+progress_002,aktif_gorev_id,string,gorev_001,Local,Kullanıcının o anda hangi görevde olduğunu tutar.
+progress_003,tamamlanan_gorevler,list,[],Local,Kullanıcının tamamladığı görevlerin listesini tutar.
+progress_004,toplam_puan,int,0,Local,Kullanıcının toplam puanını tutar.
+progress_005,kazanilan_rozetler,list,[],Local,Kullanıcının kazandığı rozetleri tutar.
+progress_006,rota_tamamlandi_mi,bool,FALSE,Local,Ana rotanın tamamlanıp tamamlanmadığını tutar.
+progress_007,tam_rota_tamamlandi_mi,bool,FALSE,Local,Tam kültür rotasının tamamlanıp tamamlanmadığını tutar.
+progress_008,son_konum_latitude,float,0,Local,Kullanıcının son bilinen enlem bilgisini tutar.
+progress_009,son_konum_longitude,float,0,Local,Kullanıcının son bilinen boylam bilgisini tutar.
+progress_010,ilk_acilis_mi,bool,TRUE,Local,Uygulamanın ilk kez açılıp açılmadığını kontrol eder.
+progress_011,toplam_gorev_sayisi,int,5,Local,Ana rotadaki toplam görev sayısını tutar.
+progress_012,tam_rota_gorev_sayisi,int,27,Local,Tam rotadaki toplam görev sayısını tutar.
+progress_013,ilerleme_yuzdesi,float,0,Local,Kullanıcının rota ilerleme yüzdesini tutar.
+progress_014,son_saha_test_tarihi,string,,Local,Son saha test tarihini tutar.
+progress_015,ses_acik_mi,bool,FALSE,Local,Seslendirme aktiflik durumunu tutar.

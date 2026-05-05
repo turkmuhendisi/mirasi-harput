@@ -1,0 +1,17 @@
+karakter_id,karakter_adi,karakter_tipi,donem,kisilik,konusma_tonu,gorsel_stil,kiyafet_notu,kullanilacagi_mekan_id,aktif_mi
+miras_rehberi,Miras Rehberi,Ana rehber,Genel,"Bilge, sakin, yönlendirici",Kısa ve öğretici,2D yarı gerçekçi,Harput kültürünü temsil eden sade rehber kıyafeti,harput_kalesi,Evet
+harput_muhafizi,Harput Muhafızı,Görev veren,Orta Çağ,"Ciddi, koruyucu, disiplinli",Net ve emir verici,2D/3D tarihî karakter,Kale muhafızı kıyafeti,harput_kalesi,Evet
+ulu_cami_alimi,Ulu Cami Âlimi,Bilgi aktaran,Artuklu dönemi,"Bilge, sakin, açıklayıcı",Öğretici ve sade,2D yarı gerçekçi,Dönemsel ilim insanı kıyafeti,harput_ulu_cami,Evet
+tas_ustasi,Taş Ustası,Mimari anlatıcı,Yerel mimari,"Gözlemci, detaycı, pratik",Kısa ve teknik,2D yarı gerçekçi,Taş ustası önlüğü,alacali_cami,Evet
+arap_baba_anlaticisi,Arap Baba Anlatıcısı,Gizemli anlatıcı,Halk anlatısı,"Gizemli, sakin, derin",Sakin ve etkileyici,2D atmosferik karakter,Tarihî anlatıcı kıyafeti,arap_baba_turbesi,Evet
+meryem_ana_rehberi,Meryem Ana Rehberi,Kültürel miras anlatıcısı,Çok kültürlü dönem,"Saygılı, açıklayıcı, dengeli",Tarafsız ve tarihî,2D yarı gerçekçi,Sade tarihî rehber kıyafeti,meryem_ana_kilisesi,Evet
+sarahatun_anlaticisi,Sarahatun Anlatıcısı,Tarihî figür anlatıcısı,Akkoyunlu / Osmanlı,"Bilge, güçlü, sakin",Resmî ve öğretici,2D yarı gerçekçi,Dönemsel kadın figür kıyafeti,sarahatun_cami,Hayır
+kursunlu_rehberi,Kurşunlu Rehberi,Bilgi aktaran,Osmanlı dönemi,"Sakin, açıklayıcı, dikkatli",Kısa ve öğretici,2D yarı gerçekçi,Yerel rehber kıyafeti,kursunlu_cami,Hayır
+hamam_ustasi,Hamam Ustası,Sosyal yaşam anlatıcısı,Osmanlı dönemi,"Pratik, canlı, anlatıcı",Samimi ve kısa,2D yarı gerçekçi,Hamam görevlisi kıyafeti,hoca_hasan_hamami,Hayır
+seyir_rehberi,Seyir Rehberi,Final anlatıcı,Genel,"Sakin, şiirsel, gözlemci",Etkileyici ve kısa,2D minimal rehber,Sade rehber kıyafeti,cam_seyir_terasi,Hayır
+balakgazi_komutani,Balakgazi Komutanı,Kahraman anlatıcı,Türk-İslam tarihi,"Cesur, lider, net",Motive edici,2D/3D karakter,Zırhlı komutan kıyafeti,balakgazi_heykeli,Hayır
+merkez_rehberi,Merkez Rehberi,Meydan anlatıcısı,Genel,"Pratik, açıklayıcı, sade",Kısa ve yönlendirici,2D yarı gerçekçi,Yerel rehber kıyafeti,meydan_cami,Hayır
+zindan_golgesi,Zindan Gölgesi,Gizem karakteri,Orta Çağ,"Gizemli, uyarıcı, ciddi",Düşük tonlu ve kısa,2D karanlık atmosferli,Koyu pelerinli anlatıcı,kale_zindani,Hayır
+mezarlik_rehberi,Hafıza Rehberi,Türbe anlatıcısı,Genel,"Saygılı, sakin, dengeli",Sessiz ve açıklayıcı,2D sade karakter,Sade koyu rehber kıyafeti,imam_efendi_turbesi,Hayır
+doga_rehberi,Doğa Rehberi,Doğal rota anlatıcısı,Genel,"Dikkatli, uyarıcı, pratik",Net ve güvenlik odaklı,2D sade karakter,Arazi rehberi kıyafeti,buzluk_magarasi,Hayır
+kilise_rehberi,Kilise Rehberi,Kültürel miras anlatıcısı,Çok kültürlü dönem,"Saygılı, tarafsız, bilgilendirici",Tarafsız ve tarihî,2D yarı gerçekçi,Sade kültür rehberi kıyafeti,surp_hagop_kilisesi,Hayır

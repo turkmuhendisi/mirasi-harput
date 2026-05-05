@@ -1,0 +1,6 @@
+rota_id,rota_adi,rota_aciklamasi,tahmini_sure_dk,toplam_mekan_sayisi,zorluk,hedef_kitle,aktif_mi,baslangic_mekan_id,bitis_mekan_id
+harput_ana_rota,Harput Ana Tarih Rotası,Harput Kalesi ile başlayıp Meryem Ana Kilisesi ile tamamlanan kısa AR tarih rotası,60,5,Kolay,Genel ziyaretçi,Evet,harput_kalesi,meryem_ana_kilisesi
+harput_tam_rota,Harput Tam Kültür Rotası,"Harput merkezindeki cami, türbe, hamam, kale, kilise, seyir ve doğal alanları kapsayan geniş rota",240,27,Zor,Deneyimli ziyaretçi,Hayır,harput_kalesi,surp_garabet_kilisesi
+harput_mimari_rota,Harput Mimari İzler Rotası,"Cami, hamam, kale ve zindan yapıları üzerinden mimari izleri anlatan rota",120,12,Orta,Kültür meraklısı,Hayır,harput_ulu_cami,kale_zindani
+harput_inanc_rota,Harput İnanç ve Kültür Rotası,"Cami, türbe, mescit ve kilise yapıları üzerinden Harput'un çok katmanlı kültürel mirasını anlatan rota",150,15,Orta,Kültür ve tarih meraklısı,Hayır,harput_ulu_cami,surp_garabet_kilisesi
+harput_dogal_rota,Harput Doğal Keşif Rotası,Buzluk Mağarası ve Ölbe Vadisi çevresini kapsayan araçlı veya yürüyüş destekli ek rota,150,2,Zor,Deneyimli ziyaretçi,Hayır,buzluk_magarasi,olbe_vadisi
