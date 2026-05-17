@@ -2,5 +2,7 @@ public enum DataEnvironment
 {
     HarputProduction,
     FiratCampusTest,
-    CurrentLocationTest
+    CurrentLocationTest,
+    ParkOutdoorTest,
+    MesireAlani
 }

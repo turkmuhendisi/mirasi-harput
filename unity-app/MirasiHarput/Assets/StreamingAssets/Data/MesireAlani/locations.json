@@ -1,0 +1,34 @@
+{
+  "locations": [
+    {
+      "id": "mesire_nokta_01",
+      "name": "Mesire Alanı — 1. Nokta",
+      "shortDescription": "Mesire alanı test rotası — başlangıç.",
+      "longDescription": "İlk NPC ile etkileşime geçmek için bu noktaya 2 m yaklaşın.",
+      "latitude": 38.678165,
+      "longitude": 39.192566,
+      "triggerRadiusMeters": 2.0,
+      "npcId": "npc_guide_1",
+      "npcDisplayTitle": "1. NPC Muallim",
+      "relatedQuestId": "quest_mesire_nokta_01",
+      "imageKey": "npc_guide_1",
+      "isStartPoint": true,
+      "isFinalPoint": false
+    },
+    {
+      "id": "mesire_nokta_02",
+      "name": "Mesire Alanı — 2. Nokta",
+      "shortDescription": "Mesire alanı test rotası — ikinci durak.",
+      "longDescription": "İlk NPC ile konuştuktan sonra bu noktadaki ikinci NPC ile etkileşime geçin (2 m yakınlık).",
+      "latitude": 38.678078,
+      "longitude": 39.192749,
+      "triggerRadiusMeters": 2.0,
+      "npcId": "npc_guide_2",
+      "npcDisplayTitle": "2. NPC Bilge Adam",
+      "relatedQuestId": "quest_mesire_nokta_02",
+      "imageKey": "npc_guide_2",
+      "isStartPoint": false,
+      "isFinalPoint": true
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "routes": [
+    {
+      "routeId": "park_outdoor_test_rotasi",
+      "routeName": "Park Dış Ortam Test Rotası (10 durak)",
+      "orderedLocationIds": [
+        "park_durak_01",
+        "park_durak_02",
+        "park_durak_03",
+        "park_durak_04",
+        "park_durak_05",
+        "park_durak_06",
+        "park_durak_07",
+        "park_durak_08",
+        "park_durak_09",
+        "park_durak_10"
+      ]
+    }
+  ]
+}

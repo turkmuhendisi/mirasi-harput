@@ -11,6 +11,7 @@ public class LocationData
     public double longitude;
     public float triggerRadiusMeters;
     public string npcId;
+    public string npcDisplayTitle;
     public string relatedQuestId;
     public string imageKey;
     public bool isStartPoint;

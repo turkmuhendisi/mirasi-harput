@@ -301,8 +301,11 @@ public class JsonDataLoader : MonoBehaviour
 
     void ResolveEnvironmentConfig()
     {
-        if (environmentConfig == null)
-            environmentConfig = FindAnyObjectByType<DataEnvironmentConfig>();
+        if (environmentConfig != null)
+            return;
+
+        var configs = FindObjectsByType<DataEnvironmentConfig>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        environmentConfig = configs.Length > 0 ? configs[0] : null;
     }
 
     void ResolveLocationManager()

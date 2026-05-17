@@ -1,0 +1,12 @@
+{
+  "routes": [
+    {
+      "routeId": "mesire_alani_test_rotasi",
+      "routeName": "Mesire Alanı Test Rotası (2 durak)",
+      "orderedLocationIds": [
+        "mesire_nokta_01",
+        "mesire_nokta_02"
+      ]
+    }
+  ]
+}

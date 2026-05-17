@@ -9,8 +9,8 @@ using UnityEngine.InputSystem;
 public class IndoorNpcTestManager : MonoBehaviour
 {
     const string SaveFileName = "indoor_npc_test_anchors.json";
-    const string Npc1ResourcePath = "IndoorNpc/npc_guide_1";
-    const string Npc2ResourcePath = "IndoorNpc/npc_guide_2";
+    public const string Npc1ResourcePath = "IndoorNpc/npc_guide_1";
+    public const string Npc2ResourcePath = "IndoorNpc/npc_guide_2";
 
     [Header("State")]
     [SerializeField] bool setupCompleted;
@@ -34,6 +34,9 @@ public class IndoorNpcTestManager : MonoBehaviour
     [SerializeField] GameObject npc1Prefab = null;
     [SerializeField] GameObject npc2Prefab = null;
     [SerializeField] Transform indoorNpcRoot = null;
+
+    public GameObject Npc1Prefab => npc1Prefab;
+    public GameObject Npc2Prefab => npc2Prefab;
 
     [Header("Options")]
     [SerializeField] bool initializeOnStart = true;
@@ -72,6 +75,9 @@ public class IndoorNpcTestManager : MonoBehaviour
 
     void Start()
     {
+        if (DataEnvironmentModeActivator.IsGpsRouteModeActive)
+            return;
+
         if (initializeOnStart)
             InitializeIndoorTest();
     }
@@ -400,7 +406,9 @@ public class IndoorNpcTestManager : MonoBehaviour
 
     ARNpcController SpawnNpc(IndoorNpcAnchorData anchorData, GameObject prefab, string resourcePath, bool isTarget)
     {
-        var npcObject = prefab != null ? Instantiate(prefab) : CreateFallbackNpc(anchorData.npcName, resourcePath);
+        var npcObject = prefab != null
+            ? Instantiate(prefab)
+            : NpcVisualSpawn.Create(anchorData.npcName, null, resourcePath, fallbackNpcHeightMeters);
         npcObject.name = anchorData.npcName;
         npcObject.transform.SetParent(indoorNpcRoot, false);
         npcObject.transform.localPosition = anchorData.localPosition;
@@ -413,46 +421,6 @@ public class IndoorNpcTestManager : MonoBehaviour
         controller.SetManager(this);
         controller.Setup(anchorData.npcId, anchorData.npcName, isTarget);
         return controller;
-    }
-
-    GameObject CreateFallbackNpc(string npcName, string resourcePath)
-    {
-        var texture = Resources.Load<Texture2D>(resourcePath);
-        if (texture == null)
-        {
-            var capsule = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-            capsule.transform.localScale = new Vector3(0.45f, fallbackNpcHeightMeters * 0.5f, 0.45f);
-            AddNameLabel(capsule.transform, npcName, fallbackNpcHeightMeters + 0.18f);
-            return capsule;
-        }
-
-        var npcObject = new GameObject(npcName);
-        var renderer = npcObject.AddComponent<SpriteRenderer>();
-        var pixelsPerUnit = texture.height / Mathf.Max(0.1f, fallbackNpcHeightMeters);
-        renderer.sprite = Sprite.Create(texture, new Rect(0f, 0f, texture.width, texture.height), new Vector2(0.5f, 0f), pixelsPerUnit);
-        renderer.sortingOrder = 20;
-
-        var collider = npcObject.AddComponent<BoxCollider>();
-        collider.size = new Vector3(0.8f, fallbackNpcHeightMeters, 0.08f);
-        collider.center = new Vector3(0f, fallbackNpcHeightMeters * 0.5f, 0f);
-
-        AddNameLabel(npcObject.transform, npcName, fallbackNpcHeightMeters + 0.16f);
-        return npcObject;
-    }
-
-    void AddNameLabel(Transform parent, string label, float height)
-    {
-        var labelObject = new GameObject("NameLabel");
-        labelObject.transform.SetParent(parent, false);
-        labelObject.transform.localPosition = new Vector3(0f, height, 0f);
-
-        var textMesh = labelObject.AddComponent<TextMesh>();
-        textMesh.text = label;
-        textMesh.fontSize = 42;
-        textMesh.characterSize = 0.025f;
-        textMesh.anchor = TextAnchor.MiddleCenter;
-        textMesh.alignment = TextAlignment.Center;
-        textMesh.color = Color.white;
     }
 
     void DestroySpawnedNpcs()

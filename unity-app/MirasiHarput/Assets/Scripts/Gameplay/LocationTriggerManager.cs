@@ -247,6 +247,11 @@ public class LocationTriggerManager : MonoBehaviour
         return true;
     }
 
+    public bool TryGetPlayerCoordinates(out double latitude, out double longitude)
+    {
+        return TryGetCurrentCoordinates(out latitude, out longitude);
+    }
+
     public void TriggerLocation(LocationData location)
     {
         if (location == null || string.IsNullOrEmpty(location.id))

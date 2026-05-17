@@ -1,10 +1,13 @@
+using System.Collections;
 using System.Globalization;
 using TMPro;
 using UnityEngine;
 
 public class LocationDebugUI : MonoBehaviour
 {
-    [SerializeField] LocationManager locationManager;
+    [SerializeField] LocationManager locationManager = null;
+    [SerializeField] LocationTriggerManager locationTriggerManager = null;
+    [SerializeField] JsonDataLoader dataLoader = null;
 
     [Header("Text References")]
     [SerializeField] TMP_Text statusText = null;
@@ -14,26 +17,31 @@ public class LocationDebugUI : MonoBehaviour
     [SerializeField] TMP_Text targetText = null;
     [SerializeField] TMP_Text distanceText = null;
 
-    [Header("Target")]
-    [SerializeField] string targetName = "Harput Kalesi";
-    [SerializeField] double targetLatitude = 38.703448d;
-    [SerializeField] double targetLongitude = 39.257222d;
     [SerializeField, Min(0.05f)] float refreshInterval = 0.25f;
 
     bool subscribedToLocationUpdates;
+    bool subscribedToDataLoaded;
     float nextRefreshTime;
 
     void OnEnable()
     {
-        ResolveLocationManager();
+        ResolveReferences();
         SubscribeToLocationUpdates();
         Refresh();
     }
 
     void Start()
     {
-        ResolveLocationManager();
+        ResolveReferences();
         SubscribeToLocationUpdates();
+        Refresh();
+        StartCoroutine(RefreshAfterCanvasReady());
+    }
+
+    IEnumerator RefreshAfterCanvasReady()
+    {
+        yield return null;
+        Canvas.ForceUpdateCanvases();
         Refresh();
     }
 
@@ -51,26 +59,53 @@ public class LocationDebugUI : MonoBehaviour
         if (subscribedToLocationUpdates && locationManager != null)
             locationManager.OnLocationUpdated -= HandleLocationUpdated;
 
+        if (subscribedToDataLoaded && dataLoader != null)
+            dataLoader.OnDataLoaded -= HandleDataLoaded;
+
         subscribedToLocationUpdates = false;
+        subscribedToDataLoaded = false;
     }
 
-    void ResolveLocationManager()
+    void ResolveReferences()
     {
-        if (locationManager != null)
-            return;
-
-        locationManager = LocationManager.Instance;
         if (locationManager == null)
-            locationManager = FindAnyObjectByType<LocationManager>();
+        {
+            locationManager = LocationManager.Instance;
+            if (locationManager == null)
+                locationManager = FindAnyObjectByType<LocationManager>();
+        }
+
+        if (locationTriggerManager == null)
+        {
+            var triggers = FindObjectsByType<LocationTriggerManager>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            locationTriggerManager = triggers.Length > 0 ? triggers[0] : null;
+        }
+
+        if (dataLoader == null)
+        {
+            if (JsonDataLoader.Instance != null)
+                dataLoader = JsonDataLoader.Instance;
+            else
+            {
+                var loaders = FindObjectsByType<JsonDataLoader>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+                dataLoader = loaders.Length > 0 ? loaders[0] : null;
+            }
+        }
     }
 
     void SubscribeToLocationUpdates()
     {
-        if (subscribedToLocationUpdates || locationManager == null)
-            return;
+        if (!subscribedToLocationUpdates && locationManager != null)
+        {
+            locationManager.OnLocationUpdated += HandleLocationUpdated;
+            subscribedToLocationUpdates = true;
+        }
 
-        locationManager.OnLocationUpdated += HandleLocationUpdated;
-        subscribedToLocationUpdates = true;
+        if (!subscribedToDataLoaded && dataLoader != null)
+        {
+            dataLoader.OnDataLoaded += HandleDataLoaded;
+            subscribedToDataLoaded = true;
+        }
     }
 
     void HandleLocationUpdated(LocationManager updatedLocationManager)
@@ -78,12 +113,16 @@ public class LocationDebugUI : MonoBehaviour
         Refresh();
     }
 
+    void HandleDataLoaded(JsonDataLoader loader)
+    {
+        dataLoader = loader;
+        Refresh();
+    }
+
     void Refresh()
     {
-        ResolveLocationManager();
+        ResolveReferences();
         SubscribeToLocationUpdates();
-
-        SetText(targetText, $"Hedef: {targetName}");
 
         if (locationManager == null)
         {
@@ -91,18 +130,24 @@ public class LocationDebugUI : MonoBehaviour
             SetText(latitudeText, "Latitude: -");
             SetText(longitudeText, "Longitude: -");
             SetText(accuracyText, "Accuracy: -");
+            SetText(targetText, "Hedef: -");
             SetText(distanceText, "Mesafe: -");
             return;
         }
 
-        SetText(statusText, $"Durum: {locationManager.StatusMessage}");
+        var environmentLabel = dataLoader != null ? dataLoader.ActiveEnvironmentName : "-";
+        var dataStatus = dataLoader != null
+            ? (dataLoader.IsLoaded ? "veri yüklendi" : dataLoader.StatusMessage)
+            : "JsonDataLoader yok";
+        SetText(statusText, $"Durum: {locationManager.StatusMessage} | Ortam: {environmentLabel} | {dataStatus}");
 
         if (!locationManager.IsLocationReady)
         {
             SetText(latitudeText, "Latitude: -");
             SetText(longitudeText, "Longitude: -");
             SetText(accuracyText, "Accuracy: -");
-            SetText(distanceText, "Mesafe: GPS bekleniyor");
+            SetText(targetText, "Hedef: GPS bekleniyor");
+            SetText(distanceText, "Mesafe: -");
             return;
         }
 
@@ -110,13 +155,29 @@ public class LocationDebugUI : MonoBehaviour
         SetText(longitudeText, $"Longitude: {FormatCoordinate(locationManager.Longitude)}");
         SetText(accuracyText, $"Accuracy: {locationManager.HorizontalAccuracy.ToString("F1", CultureInfo.InvariantCulture)} m");
 
-        var distanceMeters = LocationManager.CalculateDistanceMeters(
-            locationManager.Latitude,
-            locationManager.Longitude,
-            targetLatitude,
-            targetLongitude);
+        var target = locationTriggerManager != null ? locationTriggerManager.CurrentTargetLocation : null;
+        if (target == null && dataLoader != null && dataLoader.IsLoaded)
+            target = dataLoader.GetStartLocation();
 
-        SetText(distanceText, $"Mesafe: {distanceMeters.ToString("F1", CultureInfo.InvariantCulture)} m");
+        if (target == null)
+        {
+            SetText(targetText, "Hedef: -");
+            SetText(distanceText, "Mesafe: -");
+            return;
+        }
+
+        SetText(targetText, $"Hedef: {target.name}");
+
+        var distanceMeters = locationTriggerManager != null && locationTriggerManager.DistanceToCurrentTarget >= 0f
+            ? locationTriggerManager.DistanceToCurrentTarget
+            : (float)LocationManager.CalculateDistanceMeters(
+                locationManager.Latitude,
+                locationManager.Longitude,
+                target.latitude,
+                target.longitude);
+
+        var inside = locationTriggerManager != null && locationTriggerManager.IsInsideTriggerRadius;
+        SetText(distanceText, $"Mesafe: {distanceMeters.ToString("F1", CultureInfo.InvariantCulture)} m | Tetik: {(inside ? "Evet" : "Hayır")}");
     }
 
     static string FormatCoordinate(double coordinate)

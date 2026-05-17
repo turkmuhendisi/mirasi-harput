@@ -56,6 +56,11 @@ public class ARNpcController : MonoBehaviour
         canInteract = value;
     }
 
+    public void SetFaceCamera(bool value)
+    {
+        faceCamera = value;
+    }
+
     public void OnTapped()
     {
         if (!canInteract || manager == null || string.IsNullOrEmpty(npcId))

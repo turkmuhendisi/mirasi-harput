@@ -1,0 +1,38 @@
+{
+  "quests": [
+    {
+      "id": "quest_mesire_nokta_01",
+      "title": "1. NPC Muallim",
+      "description": "Mesire alanında ilk rehberle tanışın.",
+      "objectiveText": "Görevi tamamladıktan sonra 2. noktadaki rehbere 2 m yaklaşın.",
+      "locationId": "mesire_nokta_01",
+      "nextLocationId": "mesire_nokta_02",
+      "rewardPoint": 10,
+      "badgeId": "badge_mesire_nokta_01",
+      "npcDialogueStart": "Merhaba! Mesire alanı test rotasına hoş geldin. Ben birinci rehberim.",
+      "npcDialogueComplete": "Harika! Şimdi ikinci noktaya git ve oradaki rehberle konuş. Ona 2 metre yaklaşman gerekiyor.",
+      "questionText": "Sıradaki adım ne olmalı?",
+      "correctAnswer": "2. noktadaki rehberle konuşmak",
+      "wrongAnswers": [
+        "Uygulamayı kapatmak",
+        "Parktan ayrılmak",
+        "GPS'i kapatmak"
+      ]
+    },
+    {
+      "id": "quest_mesire_nokta_02",
+      "title": "2. NPC Bilge Adam",
+      "description": "İkinci rehberle etkileşime geçerek test rotasını tamamlayın.",
+      "objectiveText": "İkinci rehberle konuşup test rotasını bitirin.",
+      "locationId": "mesire_nokta_02",
+      "nextLocationId": "",
+      "rewardPoint": 15,
+      "badgeId": "badge_mesire_nokta_02",
+      "npcDialogueStart": "İkinci noktaya ulaştın. Birinci rehberle konuştuğun için buradayım.",
+      "npcDialogueComplete": "Mesire alanı test rotası tamamlandı. Tebrikler!",
+      "questionText": "Bu rotada kaç durak vardı?",
+      "correctAnswer": "2",
+      "wrongAnswers": ["1", "3", "10"]
+    }
+  ]
+}
