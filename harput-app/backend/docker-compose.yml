@@ -1,0 +1,23 @@
+services:
+  mirasiharput-api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: mirasiharput-api
+    restart: unless-stopped
+    ports:
+      # Diğer projelerle çakışmaması için özel port
+      - "8087:80"
+    env_file:
+      - .env
+    volumes:
+      # Üretilen sertifikalar konteyner yeniden başlasa da kalır
+      - ./storage/certificates:/var/www/html/storage/certificates
+      # Sunucuya sonradan eklenen font dosyaları için (opsiyonel)
+      - ./assets/fonts:/var/www/html/assets/fonts:ro
+    networks:
+      - mirasiharput-net
+
+networks:
+  mirasiharput-net:
+    name: mirasiharput-net

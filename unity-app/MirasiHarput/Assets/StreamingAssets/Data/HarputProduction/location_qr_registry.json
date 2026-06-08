@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "appPayloadPrefix": "mirasi-harput://v1/location/",
+  "qrImageFolder": "QrImages",
+  "locations": [
+    {
+      "locationId": "harput_kalesi",
+      "displayName": "Harput Kalesi",
+      "payload": "mirasi-harput://v1/location/harput_kalesi",
+      "qrImageFile": "harput_kalesi.png",
+      "alternatePayloads": [
+        "harput_kalesi",
+        "https://mirasiharput.com/qr/harput_kalesi"
+      ],
+      "placementNotes": "QR içeriği: mirasi-harput://v1/location/harput_kalesi"
+    },
+    {
+      "locationId": "ulu_cami",
+      "displayName": "Ulu Cami",
+      "payload": "mirasi-harput://v1/location/ulu_cami",
+      "qrImageFile": "ulu_cami.png",
+      "alternatePayloads": [
+        "ulu_cami",
+        "https://mirasiharput.com/qr/ulu_cami",
+        "https://me-qr.com/v/106306509"
+      ],
+      "placementNotes": "QR içeriği: mirasi-harput://v1/location/ulu_cami"
+    },
+    {
+      "locationId": "sarahatun_camii",
+      "displayName": "Sarahatun Camii",
+      "payload": "mirasi-harput://v1/location/sarahatun_camii",
+      "qrImageFile": "sarahatun_camii.png",
+      "alternatePayloads": [
+        "sarahatun_camii",
+        "https://mirasiharput.com/qr/sarahatun_camii"
+      ],
+      "placementNotes": "QR içeriği: mirasi-harput://v1/location/sarahatun_camii"
+    },
+    {
+      "locationId": "arap_baba_turbesi",
+      "displayName": "Arap Baba Türbesi",
+      "payload": "mirasi-harput://v1/location/arap_baba_turbesi",
+      "qrImageFile": "arap_baba_turbesi.png",
+      "alternatePayloads": [
+        "arap_baba_turbesi",
+        "https://mirasiharput.com/qr/arap_baba_turbesi",
+        "https://me-qr.com/2U5VqG3r"
+      ],
+      "placementNotes": "QR içeriği: mirasi-harput://v1/location/arap_baba_turbesi"
+    },
+    {
+      "locationId": "buzluk_magarasi",
+      "displayName": "Buzluk Mağarası",
+      "payload": "mirasi-harput://v1/location/buzluk_magarasi",
+      "qrImageFile": "buzluk_magarasi.png",
+      "alternatePayloads": [
+        "buzluk_magarasi",
+        "https://mirasiharput.com/qr/buzluk_magarasi"
+      ],
+      "placementNotes": "QR içeriği: mirasi-harput://v1/location/buzluk_magarasi"
+    }
+  ]
+}

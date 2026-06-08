@@ -123,7 +123,28 @@ public class OutdoorGpsNpcViewManager : MonoBehaviour
 
     void HandleLocationTriggered(LocationData location, QuestData quest)
     {
+        if (locationTriggerManager != null && locationTriggerManager.UsesQrTriggerMode)
+            PresentQrTriggeredNpcAtCamera(location);
+
         OpenQuestInteractionForLocation(location);
+    }
+
+    void PresentQrTriggeredNpcAtCamera(LocationData location)
+    {
+        if (location == null || string.IsNullOrEmpty(location.id))
+            return;
+
+        if (!markers.TryGetValue(location.id, out var marker) || marker == null)
+            return;
+
+        var cam = Camera.main != null ? Camera.main : FindAnyObjectByType<Camera>();
+        if (cam == null)
+            return;
+
+        SnapMarkerInFrontOfCamera(marker, cam);
+        marker.SetVisible(true);
+        marker.gameObject.SetActive(true);
+        marker.RefreshRenderers();
     }
 
     void SubscribeToGpsUpdates()

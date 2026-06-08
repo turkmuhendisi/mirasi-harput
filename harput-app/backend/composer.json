@@ -1,0 +1,14 @@
+{
+    "name": "mirasiharput/backend",
+    "description": "Miras'i Harput certificate & email backend",
+    "type": "project",
+    "require": {
+        "php": ">=8.0",
+        "phpmailer/phpmailer": "^6.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "MirasiHarput\\": "src/"
+        }
+    }
+}

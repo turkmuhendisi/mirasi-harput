@@ -1,0 +1,21 @@
+R_DEF: Internal format may change without notice
+local
+drawable certificate_preview
+drawable ic_launcher_foreground
+drawable ic_notification_media
+drawable ic_notification_pause
+drawable ic_notification_play
+drawable ic_notification_stop
+mipmap ic_launcher
+mipmap ic_launcher_round
+string app_name
+string notification_action_pause
+string notification_action_play
+string notification_action_stop
+string notification_artist
+string notification_channel_description
+string notification_channel_name
+string notification_default_title
+string notification_playing
+style Theme.MirasiHarput
+xml network_security_config

@@ -78,6 +78,12 @@ public class LocationTriggerDebugUI : MonoBehaviour
         SetText(triggerRadiusText, "Trigger radius: " + (currentTarget != null ? currentTarget.triggerRadiusMeters.ToString("F1", CultureInfo.InvariantCulture) + " m" : "-"));
         SetText(routeProgressText, "Route progress: " + triggerManager.GetRouteProgressText());
         SetText(insideTriggerText, "Inside trigger: " + (triggerManager.IsInsideTriggerRadius ? "Evet" : "Hayır"));
+
+        if (triggerManager.UsesQrTriggerMode)
+        {
+            SetText(distanceToTargetText, "Distance: QR modu (GPS devre dışı)");
+            SetText(insideTriggerText, "Inside trigger: QR bekleniyor");
+        }
     }
 
     static string FormatDistance(float distanceMeters)

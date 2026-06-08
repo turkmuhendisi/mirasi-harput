@@ -7,6 +7,9 @@ public class LocationTriggerManager : MonoBehaviour
     [SerializeField] LocationManager locationManager = null;
     [SerializeField] JsonDataLoader dataLoader = null;
 
+    [Header("Tetikleme kaynağı")]
+    [SerializeField] LocationTriggerSource triggerSource = LocationTriggerSource.GpsProximity;
+
     [Header("Route")]
     [SerializeField] bool useRouteOrder = true;
     [SerializeField] bool triggerOnlyCurrentRouteLocation = true;
@@ -57,6 +60,29 @@ public class LocationTriggerManager : MonoBehaviour
         get { return useMockLocationInEditor; }
     }
 
+    public LocationTriggerSource TriggerSource
+    {
+        get { return triggerSource; }
+    }
+
+    public bool UsesQrTriggerMode
+    {
+        get { return triggerSource == LocationTriggerSource.QrCode; }
+    }
+
+    public bool AllowRetriggerSameLocation
+    {
+        get { return allowRetriggerSameLocation; }
+    }
+
+    public void SetTriggerSource(LocationTriggerSource source)
+    {
+        triggerSource = source;
+        StatusMessage = UsesQrTriggerMode
+            ? "Tetikleme: QR kod"
+            : "Tetikleme: GPS yakınlık";
+    }
+
     void OnEnable()
     {
         ResolveReferences();
@@ -72,6 +98,9 @@ public class LocationTriggerManager : MonoBehaviour
 
     void Update()
     {
+        if (UsesQrTriggerMode)
+            return;
+
         if (Time.unscaledTime < nextCheckTime)
             return;
 
@@ -252,6 +281,34 @@ public class LocationTriggerManager : MonoBehaviour
         return TryGetCurrentCoordinates(out latitude, out longitude);
     }
 
+    public bool TryValidateQrTrigger(LocationData location, out string failureMessage)
+    {
+        failureMessage = string.Empty;
+
+        if (location == null || string.IsNullOrEmpty(location.id))
+        {
+            failureMessage = "Tetiklenecek lokasyon bulunamadı";
+            return false;
+        }
+
+        if (triggerOnlyCurrentRouteLocation && CurrentTargetLocation != null && location.id != CurrentTargetLocation.id)
+        {
+            failureMessage = "Şu an sıradaki durak: " + CurrentTargetLocation.name +
+                ". Lütfen bu konumdaki QR kodunu okutun.";
+            StatusMessage = failureMessage;
+            return false;
+        }
+
+        if (!allowRetriggerSameLocation && triggeredLocationIds.Contains(location.id))
+        {
+            failureMessage = location.name + " için QR zaten okutuldu.";
+            StatusMessage = failureMessage;
+            return false;
+        }
+
+        return true;
+    }
+
     public void TriggerLocation(LocationData location)
     {
         if (location == null || string.IsNullOrEmpty(location.id))
@@ -260,15 +317,10 @@ public class LocationTriggerManager : MonoBehaviour
             return;
         }
 
-        if (triggerOnlyCurrentRouteLocation && CurrentTargetLocation != null && location.id != CurrentTargetLocation.id)
+        if (!TryValidateQrTrigger(location, out var failureMessage))
         {
-            StatusMessage = "Lokasyon mevcut rota hedefi değil";
-            return;
-        }
-
-        if (!allowRetriggerSameLocation && triggeredLocationIds.Contains(location.id))
-        {
-            StatusMessage = location.name + " daha önce tetiklendi";
+            if (string.IsNullOrEmpty(failureMessage))
+                StatusMessage = "Lokasyon tetiklenemedi";
             return;
         }
 

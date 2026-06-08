@@ -379,6 +379,10 @@ public class QuestInteractionUI : MonoBehaviour
     void HandleContinueRoute()
     {
         HidePanel();
+
+        var flow = FindAnyObjectByType<QrFlowController>(FindObjectsInactive.Include);
+        if (flow != null)
+            flow.NotifyQuestCompleted();
     }
 
     void RefreshActionButtons()

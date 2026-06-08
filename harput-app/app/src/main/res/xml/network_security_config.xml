@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Üretimde HTTPS kullanın. Aşağıdaki cleartext (HTTP) izni yalnızca
+  test/geliştirme amaçlıdır. Backend HTTPS ise bu blok kaldırılabilir.
+-->
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">187.127.83.10</domain>
+    </domain-config>
+</network-security-config>

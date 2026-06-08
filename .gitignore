@@ -4,3 +4,12 @@
 /[Uu]nity-app/MirasiHarput/[Bb]uild/
 /[Uu]nity-app/MirasiHarput/[Ll]ogs/
 /[Uu]nity-app/MirasiHarput/[Uu]serSettings/
+
+# Harput Android + Backend hassas dosyalar
+harput-app/local.properties
+harput-app/secrets.properties
+harput-app/backend/.env
+harput-app/backend/.env.*
+!harput-app/backend/.env.example
+harput-app/backend/vendor/
+harput-app/backend/storage/certificates/*.png

@@ -25,7 +25,23 @@ public static class DataEnvironmentModeActivator
                 configs[i].ApplyPlayMode();
         }
 
-        OutdoorGpsNpcViewRuntimeBootstrap.EnsureHost();
+        if (!IsQrLocationExperienceMvpActive())
+            OutdoorGpsNpcViewRuntimeBootstrap.EnsureHost();
+    }
+
+    static bool IsQrLocationExperienceMvpActive()
+    {
+        var configs = UnityEngine.Object.FindObjectsByType<DataEnvironmentConfig>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        if (configs == null)
+            return false;
+
+        for (var i = 0; i < configs.Length; i++)
+        {
+            if (configs[i] != null && configs[i].UsesQrLocationExperienceMvp())
+                return true;
+        }
+
+        return false;
     }
 
     internal static void SetGpsRouteModeActive(bool value)
@@ -36,21 +52,62 @@ public static class DataEnvironmentModeActivator
     /// <summary>
     /// GPS rota modunda sol üst konum/tetik debug panellerinin AR üzerinde görünür olmasını sağlar.
     /// </summary>
+    /// <summary>
+    /// QR rota modunda UI canvas'ını AR üzerinde görünür ve tıklanabilir yapar.
+    /// MainScene'de UI kökünün scale'i (0,0,0) olduğu için bu adım zorunludur.
+    /// </summary>
+    internal static void EnsureQrRouteUiVisible()
+    {
+        SetObjectActive("UI", true);
+        ConfigureRouteUiCanvas(FindSceneObjectIncludingInactive("UI"), 500);
+
+        var flowRoot = FindSceneObjectIncludingInactive("LocationExperienceOverlay");
+        if (flowRoot == null)
+            flowRoot = FindSceneObjectIncludingInactive("QrFlowOverlay");
+
+        if (flowRoot != null)
+            ConfigureRouteUiCanvas(flowRoot, 2000);
+    }
+
+    public static void SetObjectActivePublic(string objectName, bool active)
+    {
+        SetObjectActive(objectName, active);
+    }
+
+    public static GameObject FindSceneObjectIncludingInactivePublic(string objectName)
+    {
+        return FindSceneObjectIncludingInactive(objectName);
+    }
+
     internal static void EnsureGpsRouteDebugUiVisible()
     {
         SetObjectActive("UI", true);
         SetObjectActive("LocationDebugPanel", true);
         SetObjectActive("LocationTriggerDebugPanel", true);
 
-        var uiRoot = FindSceneObjectIncludingInactive("UI");
-        if (uiRoot != null)
-        {
-            var rectTransform = uiRoot.GetComponent<RectTransform>();
-            if (rectTransform != null && rectTransform.localScale.sqrMagnitude < 0.01f)
-                rectTransform.localScale = Vector3.one;
+        ConfigureRouteUiCanvas(FindSceneObjectIncludingInactive("UI"), 500);
 
-            var canvas = uiRoot.GetComponent<Canvas>();
-            if (canvas != null)
+        BringPanelToFront("LocationDebugPanel");
+        BringPanelToFront("LocationTriggerDebugPanel");
+
+        SetComponentsActive<LocationDebugUI>(true);
+    }
+
+    static void ConfigureRouteUiCanvas(GameObject uiRoot, int sortingOrder)
+    {
+        if (uiRoot == null)
+            return;
+
+        var rectTransform = uiRoot.GetComponent<RectTransform>();
+        if (rectTransform != null && rectTransform.localScale.sqrMagnitude < 0.01f)
+            rectTransform.localScale = Vector3.one;
+
+        var canvas = uiRoot.GetComponent<Canvas>();
+        if (canvas != null)
+        {
+            var keepOverlay = uiRoot.name == "LocationExperienceOverlay";
+
+            if (!keepOverlay)
             {
                 var arCamera = Camera.main;
                 if (arCamera == null)
@@ -62,25 +119,28 @@ public static class DataEnvironmentModeActivator
                     canvas.worldCamera = arCamera;
                     canvas.planeDistance = 0.5f;
                 }
-
-                canvas.overrideSorting = true;
-                canvas.sortingOrder = 500;
             }
-
-            var scaler = uiRoot.GetComponent<CanvasScaler>();
-            if (scaler != null)
+            else
             {
-                scaler.enabled = false;
-                scaler.enabled = true;
+                canvas.renderMode = RenderMode.ScreenSpaceOverlay;
+                canvas.worldCamera = null;
             }
 
-            Canvas.ForceUpdateCanvases();
+            canvas.overrideSorting = true;
+            canvas.sortingOrder = sortingOrder;
         }
 
-        BringPanelToFront("LocationDebugPanel");
-        BringPanelToFront("LocationTriggerDebugPanel");
+        if (uiRoot.GetComponent<GraphicRaycaster>() == null)
+            uiRoot.AddComponent<GraphicRaycaster>();
 
-        SetComponentsActive<LocationDebugUI>(true);
+        var scaler = uiRoot.GetComponent<CanvasScaler>();
+        if (scaler != null)
+        {
+            scaler.enabled = false;
+            scaler.enabled = true;
+        }
+
+        Canvas.ForceUpdateCanvases();
     }
 
     static void BringPanelToFront(string panelName)

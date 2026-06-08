@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DataEnvironmentConfig : MonoBehaviour
 {
-    [SerializeField] DataEnvironment activeEnvironment = DataEnvironment.CurrentLocationTest;
+    [SerializeField] DataEnvironment activeEnvironment = DataEnvironment.HarputProduction;
 
     public DataEnvironment ActiveEnvironment
     {
@@ -50,16 +50,68 @@ public class DataEnvironmentConfig : MonoBehaviour
             activeEnvironment == DataEnvironment.CurrentLocationTest;
     }
 
+    public bool UsesQrTriggerMode()
+    {
+        return activeEnvironment == DataEnvironment.HarputProduction;
+    }
+
+    public bool UsesQrLocationExperienceMvp()
+    {
+        return activeEnvironment == DataEnvironment.HarputProduction;
+    }
+
     public void ApplyPlayMode()
     {
         gameObject.SetActive(true);
 
-        if (UsesGpsRouteMode())
+        if (UsesQrLocationExperienceMvp())
+            ApplyQrLocationExperienceMvpMode();
+        else if (UsesGpsRouteMode())
             ApplyGpsRouteMode();
+    }
+
+    void ApplyQrLocationExperienceMvpMode()
+    {
+        DataEnvironmentModeActivator.SetGpsRouteModeActive(false);
+
+        DataEnvironmentModeActivator.SetComponentsActive<IndoorNpcTestManager>(false);
+        DataEnvironmentModeActivator.SetObjectActive("IndoorNpcSetupPanel", false);
+        DataEnvironmentModeActivator.SetObjectActive("IndoorNpcInteractionPanel", false);
+        DataEnvironmentModeActivator.SetObjectActive("IndoorNpcRoot", false);
+
+        DisableArTemplateDemoUi();
+
+        DataEnvironmentModeActivator.SetComponentsActive<DataEnvironmentConfig>(true);
+        DataEnvironmentModeActivator.SetComponentsActive<JsonDataLoader>(false);
+        DataEnvironmentModeActivator.SetComponentsActive<LocationManager>(false);
+        DataEnvironmentModeActivator.SetComponentsActive<LocationTriggerManager>(false);
+        DataEnvironmentModeActivator.SetComponentsActive<QrLocationTriggerBridge>(false);
+        DataEnvironmentModeActivator.SetComponentsActive<QrLocationNpcPresenter>(false);
+        DataEnvironmentModeActivator.SetComponentsActive<QrFlowController>(false);
+        DataEnvironmentModeActivator.SetComponentsActive<QuestProgressManager>(false);
+        DataEnvironmentModeActivator.SetComponentsActive<QuestInteractionUI>(false);
+        DataEnvironmentModeActivator.SetComponentsActive<QrCodeScanService>(false);
+        DataEnvironmentModeActivator.SetComponentsActive<AppFlowController>(true);
+        DataEnvironmentModeActivator.SetComponentsActive<ARModelViewer>(false);
+
+        DataEnvironmentModeActivator.SetObjectActive("LocationDebugPanel", false);
+        DataEnvironmentModeActivator.SetObjectActive("LocationTriggerDebugPanel", false);
+        DataEnvironmentModeActivator.SetObjectActive("DataDebugPanel", false);
+        DataEnvironmentModeActivator.SetObjectActive("QuestProgressDebugPanel", false);
+        DataEnvironmentModeActivator.SetObjectActive("QuestInteractionPanel", false);
+        DataEnvironmentModeActivator.SetObjectActive("QrFlowOverlay", false);
+
+        LocationExperienceRuntimeSetup.EnsureFlowController();
+        DataEnvironmentModeActivator.EnsureQrRouteUiVisible();
     }
 
     void ApplyGpsRouteMode()
     {
+        QrLocationTriggerRuntimeSetup.EnsureComponents();
+
+        if (UsesQrTriggerMode())
+            QrFlowRuntimeSetup.EnsureFlowController();
+
         DataEnvironmentModeActivator.SetGpsRouteModeActive(true);
 
         DataEnvironmentModeActivator.SetComponentsActive<IndoorNpcTestManager>(false);
@@ -67,6 +119,72 @@ public class DataEnvironmentConfig : MonoBehaviour
         DataEnvironmentModeActivator.SetObjectActive("IndoorNpcInteractionPanel", false);
         DataEnvironmentModeActivator.SetObjectActive("IndoorNpcRoot", false);
 
+        DisableArTemplateDemoUi();
+
+        DataEnvironmentModeActivator.SetComponentsActive<DataEnvironmentConfig>(true);
+        DataEnvironmentModeActivator.SetComponentsActive<JsonDataLoader>(true);
+        DataEnvironmentModeActivator.SetComponentsActive<LocationTriggerManager>(true);
+        DataEnvironmentModeActivator.SetComponentsActive<QrLocationTriggerBridge>(true);
+        DataEnvironmentModeActivator.SetComponentsActive<QrCodeScanService>(UsesQrTriggerMode());
+        DataEnvironmentModeActivator.SetComponentsActive<QrLocationNpcPresenter>(UsesQrTriggerMode());
+        DataEnvironmentModeActivator.SetComponentsActive<QrFlowController>(UsesQrTriggerMode());
+        DataEnvironmentModeActivator.SetComponentsActive<QuestProgressManager>(true);
+        DataEnvironmentModeActivator.SetComponentsActive<QuestInteractionUI>(true);
+
+        if (UsesQrTriggerMode())
+        {
+            DataEnvironmentModeActivator.SetObjectActive("LocationDebugPanel", false);
+            DataEnvironmentModeActivator.SetObjectActive("LocationTriggerDebugPanel", false);
+            DataEnvironmentModeActivator.SetObjectActive("DataDebugPanel", false);
+            DataEnvironmentModeActivator.SetObjectActive("QuestProgressDebugPanel", false);
+            DataEnvironmentModeActivator.SetObjectActive("QuestInteractionPanel", false);
+        }
+        else
+        {
+            DataEnvironmentModeActivator.SetObjectActive("QuestInteractionPanel", true);
+        }
+
+        var triggers = UnityEngine.Object.FindObjectsByType<LocationTriggerManager>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        for (var i = 0; i < triggers.Length; i++)
+        {
+            var trigger = triggers[i];
+            if (trigger == null)
+                continue;
+
+            trigger.SetTriggerSource(UsesQrTriggerMode() ? LocationTriggerSource.QrCode : LocationTriggerSource.GpsProximity);
+        }
+
+        var loaders = UnityEngine.Object.FindObjectsByType<JsonDataLoader>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+        for (var i = 0; i < loaders.Length; i++)
+        {
+            var loader = loaders[i];
+            if (loader == null)
+                continue;
+
+            if (!loader.IsLoaded)
+                loader.ReloadData();
+        }
+
+        if (UsesQrTriggerMode())
+        {
+            QrFlowRuntimeSetup.EnsureFlowController();
+            DataEnvironmentModeActivator.EnsureQrRouteUiVisible();
+
+            var bridges = UnityEngine.Object.FindObjectsByType<QrLocationTriggerBridge>(FindObjectsInactive.Include, FindObjectsSortMode.None);
+            for (var i = 0; i < bridges.Length; i++)
+            {
+                if (bridges[i] != null)
+                    bridges[i].BeginInitializeRoutine();
+            }
+        }
+        else
+        {
+            DataEnvironmentModeActivator.EnsureGpsRouteDebugUiVisible();
+        }
+    }
+
+    static void DisableArTemplateDemoUi()
+    {
         var templateObjects = new[]
         {
             "Object Spawner",
@@ -93,25 +211,5 @@ public class DataEnvironmentConfig : MonoBehaviour
         DataEnvironmentModeActivator.SetComponentBehavioursActiveByTypeName("ARTemplateMenuManager", false);
         DataEnvironmentModeActivator.SetComponentBehavioursActiveByTypeName("GoalManager", false);
         DataEnvironmentModeActivator.SetComponentBehavioursActiveByTypeName("ObjectSpawner", false);
-
-        DataEnvironmentModeActivator.SetComponentsActive<DataEnvironmentConfig>(true);
-        DataEnvironmentModeActivator.SetComponentsActive<JsonDataLoader>(true);
-        DataEnvironmentModeActivator.SetComponentsActive<LocationTriggerManager>(true);
-        DataEnvironmentModeActivator.SetComponentsActive<QuestProgressManager>(true);
-        DataEnvironmentModeActivator.SetComponentsActive<QuestInteractionUI>(true);
-        DataEnvironmentModeActivator.SetObjectActive("QuestInteractionPanel", true);
-
-        var loaders = UnityEngine.Object.FindObjectsByType<JsonDataLoader>(FindObjectsInactive.Include, FindObjectsSortMode.None);
-        for (var i = 0; i < loaders.Length; i++)
-        {
-            var loader = loaders[i];
-            if (loader == null)
-                continue;
-
-            if (!loader.IsLoaded)
-                loader.ReloadData();
-        }
-
-        DataEnvironmentModeActivator.EnsureGpsRouteDebugUiVisible();
     }
 }

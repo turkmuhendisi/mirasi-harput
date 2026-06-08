@@ -10,6 +10,7 @@ public class JsonDataLoader : MonoBehaviour
     const string LocationsFileName = "locations.json";
     const string QuestsFileName = "quests.json";
     const string RouteOrderFileName = "route_order.json";
+    const string LocationQrRegistryFileName = "location_qr_registry.json";
     const string CurrentTestStartLocationId = "current_test_start";
     const string CurrentTestFinalLocationId = "current_test_final";
 
@@ -30,6 +31,10 @@ public class JsonDataLoader : MonoBehaviour
     readonly List<LocationData> locations = new List<LocationData>();
     readonly List<QuestData> quests = new List<QuestData>();
     readonly List<RouteOrderData> routeOrder = new List<RouteOrderData>();
+    readonly Dictionary<string, LocationQrEntry> qrEntriesByPayload = new Dictionary<string, LocationQrEntry>(StringComparer.OrdinalIgnoreCase);
+    readonly Dictionary<string, LocationQrEntry> qrEntriesByLocationId = new Dictionary<string, LocationQrEntry>(StringComparer.OrdinalIgnoreCase);
+
+    LocationQrRegistryData qrRegistry;
 
     Coroutine loadRoutine;
 
@@ -58,6 +63,26 @@ public class JsonDataLoader : MonoBehaviour
     public string ActiveEnvironmentName
     {
         get { return GetActiveEnvironmentName(); }
+    }
+
+    public bool HasQrRegistry
+    {
+        get { return qrRegistry != null && qrEntriesByLocationId.Count > 0; }
+    }
+
+    public int QrRegistryEntryCount
+    {
+        get { return qrEntriesByLocationId.Count; }
+    }
+
+    public LocationQrRegistryData QrRegistry
+    {
+        get { return qrRegistry; }
+    }
+
+    public string QrImageFolderName
+    {
+        get { return qrRegistry != null && !string.IsNullOrEmpty(qrRegistry.qrImageFolder) ? qrRegistry.qrImageFolder : "QrImages"; }
     }
 
     void Awake()
@@ -105,10 +130,14 @@ public class JsonDataLoader : MonoBehaviour
         locations.Clear();
         quests.Clear();
         routeOrder.Clear();
+        qrEntriesByPayload.Clear();
+        qrEntriesByLocationId.Clear();
+        qrRegistry = null;
 
         string locationsJson = null;
         string questsJson = null;
         string routeOrderJson = null;
+        string qrRegistryJson = null;
         string error = null;
 
         yield return ReadStreamingAssetsText(LocationsFileName, value => locationsJson = value, value => error = value);
@@ -135,6 +164,13 @@ public class JsonDataLoader : MonoBehaviour
         if (!TryParseLocations(locationsJson, out error) ||
             !TryParseQuests(questsJson, out error) ||
             !TryParseRouteOrder(routeOrderJson, out error))
+        {
+            FinishWithError(error);
+            yield break;
+        }
+
+        yield return ReadStreamingAssetsTextOptional(LocationQrRegistryFileName, value => qrRegistryJson = value);
+        if (!string.IsNullOrWhiteSpace(qrRegistryJson) && !TryParseQrRegistry(qrRegistryJson, out error))
         {
             FinishWithError(error);
             yield break;
@@ -264,6 +300,20 @@ public class JsonDataLoader : MonoBehaviour
         }
     }
 
+    IEnumerator ReadStreamingAssetsTextOptional(string fileName, Action<string> onSuccess)
+    {
+        var uri = BuildStreamingAssetsUri(fileName);
+        using (var request = UnityWebRequest.Get(uri))
+        {
+            yield return request.SendWebRequest();
+
+            if (HasRequestError(request))
+                yield break;
+
+            onSuccess?.Invoke(request.downloadHandler.text);
+        }
+    }
+
     string BuildStreamingAssetsUri(string fileName)
     {
         var path = Path.Combine(GetDataRootPath(), fileName).Replace("\\", "/");
@@ -386,6 +436,125 @@ public class JsonDataLoader : MonoBehaviour
 
         routeOrder.AddRange(wrapper.routes);
         return true;
+    }
+
+    bool TryParseQrRegistry(string json, out string error)
+    {
+        error = string.Empty;
+        if (string.IsNullOrWhiteSpace(json))
+            return true;
+
+        qrRegistry = JsonUtility.FromJson<LocationQrRegistryData>(json);
+        if (qrRegistry == null || qrRegistry.locations == null || qrRegistry.locations.Length == 0)
+        {
+            error = LocationQrRegistryFileName + " geçerli lokasyon kaydı içermiyor.";
+            return false;
+        }
+
+        qrEntriesByPayload.Clear();
+        qrEntriesByLocationId.Clear();
+
+        for (var i = 0; i < qrRegistry.locations.Length; i++)
+        {
+            var entry = qrRegistry.locations[i];
+            if (entry == null || string.IsNullOrEmpty(entry.locationId))
+                continue;
+
+            qrEntriesByLocationId[entry.locationId] = entry;
+            RegisterQrPayload(entry.payload, entry);
+
+            if (entry.alternatePayloads == null)
+                continue;
+
+            for (var j = 0; j < entry.alternatePayloads.Length; j++)
+                RegisterQrPayload(entry.alternatePayloads[j], entry);
+        }
+
+        if (qrEntriesByLocationId.Count == 0)
+        {
+            error = LocationQrRegistryFileName + " içinde kullanılabilir kayıt yok.";
+            return false;
+        }
+
+        return true;
+    }
+
+    void RegisterQrPayload(string payload, LocationQrEntry entry)
+    {
+        var normalized = QrPayloadNormalizer.Normalize(payload);
+        if (string.IsNullOrEmpty(normalized) || entry == null)
+            return;
+
+        qrEntriesByPayload[normalized] = entry;
+    }
+
+    public bool TryResolveLocationFromQrPayload(string rawPayload, out LocationData location, out LocationQrEntry entry)
+    {
+        location = null;
+        entry = null;
+
+        var normalized = QrPayloadNormalizer.Normalize(rawPayload);
+        if (string.IsNullOrEmpty(normalized))
+            return false;
+
+        if (!qrEntriesByPayload.TryGetValue(normalized, out entry))
+        {
+            if (QrPayloadNormalizer.IsDynamicRedirectHost(normalized))
+                return false;
+
+            if (!TryResolveLocationIdFromPayload(normalized, out var locationId))
+                return false;
+
+            entry = GetQrEntryByLocationId(locationId);
+        }
+
+        if (entry == null || string.IsNullOrEmpty(entry.locationId))
+            return false;
+
+        location = GetLocationById(entry.locationId);
+        return location != null;
+    }
+
+    public LocationQrEntry GetQrEntryByLocationId(string locationId)
+    {
+        if (string.IsNullOrEmpty(locationId))
+            return null;
+
+        return qrEntriesByLocationId.TryGetValue(locationId, out var entry) ? entry : null;
+    }
+
+    public string GetQrImageAbsolutePath(string qrImageFile)
+    {
+        if (string.IsNullOrEmpty(qrImageFile))
+            return string.Empty;
+
+        return Path.Combine(GetDataRootPath(), QrImageFolderName, qrImageFile).Replace("\\", "/");
+    }
+
+    bool TryResolveLocationIdFromPayload(string normalizedPayload, out string locationId)
+    {
+        locationId = string.Empty;
+        if (string.IsNullOrEmpty(normalizedPayload))
+            return false;
+
+        var prefix = qrRegistry != null ? qrRegistry.appPayloadPrefix : string.Empty;
+        if (!string.IsNullOrEmpty(prefix))
+        {
+            var normalizedPrefix = QrPayloadNormalizer.Normalize(prefix);
+            if (!string.IsNullOrEmpty(normalizedPrefix) &&
+                normalizedPayload.StartsWith(normalizedPrefix, StringComparison.OrdinalIgnoreCase))
+            {
+                locationId = normalizedPayload.Substring(normalizedPrefix.Length).Trim('/');
+                return IsKnownQrLocationId(locationId);
+            }
+        }
+
+        return QrPayloadNormalizer.TryExtractLocationId(normalizedPayload, IsKnownQrLocationId, out locationId);
+    }
+
+    bool IsKnownQrLocationId(string locationId)
+    {
+        return !string.IsNullOrEmpty(locationId) && qrEntriesByLocationId.ContainsKey(locationId);
     }
 
     void FinishWithError(string error)
