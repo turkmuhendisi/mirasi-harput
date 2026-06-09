@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+vendor/
+.git/
+.gitignore
+storage/certificates/*.png
+README.md
+deploy.sh
+docker-compose.yml

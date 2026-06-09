@@ -29,9 +29,9 @@ final class CertificateGenerator
             throw new \RuntimeException("Sertifika şablonu bulunamadı: {$templatePath}");
         }
 
-        $image = imagecreatefrompng($templatePath);
+        $image = $this->loadTemplateImage($templatePath);
         if ($image === false) {
-            throw new \RuntimeException('Sertifika şablonu açılamadı.');
+            throw new \RuntimeException('Sertifika şablonu açılamadı. PNG veya JPEG olmalıdır.');
         }
 
         $width = imagesx($image);
@@ -104,6 +104,42 @@ final class CertificateGenerator
         $month = $months[(int) $date->format('n')];
         $year = $date->format('Y');
         return "{$day} {$month} {$year}";
+    }
+
+    /**
+     * Şablon PNG veya JPEG olabilir (.png uzantılı JPEG dosyaları da desteklenir).
+     *
+     * @return resource|false
+     */
+    private function loadTemplateImage(string $templatePath)
+    {
+        $bytes = @file_get_contents($templatePath);
+        if ($bytes === false || $bytes === '') {
+            return false;
+        }
+
+        $image = @imagecreatefromstring($bytes);
+        if ($image !== false) {
+            return $image;
+        }
+
+        $mime = null;
+        if (\function_exists('finfo_open')) {
+            $finfo = finfo_open(FILEINFO_MIME_TYPE);
+            if ($finfo !== false) {
+                $mime = finfo_buffer($finfo, $bytes);
+                finfo_close($finfo);
+            }
+        }
+
+        if ($mime === 'image/jpeg' || $mime === 'image/jpg') {
+            return @imagecreatefromjpeg($templatePath);
+        }
+        if ($mime === 'image/png') {
+            return @imagecreatefrompng($templatePath);
+        }
+
+        return false;
     }
 
     private function resolve(string $relativeOrAbsolute): string

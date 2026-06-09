@@ -16,13 +16,21 @@ sudo usermod -aG docker $USER
 # Oturumu kapatıp açın veya: newgrp docker
 ```
 
-### 2) Projeyi sunucuya alın
+### 2) Projeyi sunucuya alın (yalnızca harput-app)
+
+Monorepo'da `unity-app`, `data` vb. var; sunucuda **sadece `harput-app`** gerekir:
 
 ```bash
-cd /opt   # veya tercih ettiğiniz dizin
-git clone <GITHUB_REPO_URL> mirasi-harput
-cd mirasi-harput/harput-app/backend
+cd /opt
+git clone --filter=blob:none --sparse --branch main --depth 1 \
+  https://github.com/turkmuhendisi/mirasi-harput.git mirasi-harput
+cd mirasi-harput
+git sparse-checkout set harput-app
+cd harput-app/backend
 ```
+
+Veya: `harput-app/setup-server.sh` scriptini çalıştırın.  
+Detay: `SUNUCU_KURULUM.md`
 
 ### 3) Ortam dosyası
 

@@ -19,15 +19,20 @@ Ana Ekran (Home)
 
 ## Backend (Docker – AlmaLinux)
 
-API sunucusu: **`http://187.127.83.10:8087/`** (port 8087, diğer projelerle çakışmaz)
+API: **`http://187.127.83.10:8087/`**
 
-Sunucuda kurulum ve güncelleme: `backend/README.md`
+Repoda birden fazla klasör var (`unity-app`, `data`…). Sunucuda **yalnızca `harput-app`** kullanılır (sparse clone).
 
 ```bash
-cd harput-app/backend
-cp .env.example .env   # ilk kurulumda
-./deploy.sh            # git pull + docker yeniden build
+# İlk kurulum (sunucuda – sadece harput-app indirir)
+./setup-server.sh
+
+cd /opt/mirasi-harput/harput-app/backend
+cp .env.example .env && nano .env
+./deploy.sh
 ```
+
+Detay: `backend/SUNUCU_KURULUM.md`
 
 Android `ApiConfig.kt` içinde `BASE_URL` ve `API_KEY` backend `.env` ile eşleşmeli.
 

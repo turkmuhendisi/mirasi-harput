@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Miras\'ı Harput</string>
+    <string name="notification_action_pause">Duraklat</string>
+    <string name="notification_action_play">Oynat</string>
+    <string name="notification_action_stop">Durdur</string>
+    <string name="notification_artist">Miras\'ı Harput</string>
+    <string name="notification_channel_description">Mekan seslendirmeleri arka planda oynatılırken görünür.</string>
+    <string name="notification_channel_name">Seslendirme</string>
+    <string name="notification_default_title">Mekan seslendirmesi</string>
+    <string name="notification_playing">Seslendirme oynatılıyor</string>
+    <style name="Theme.MirasiHarput" parent="android:Theme.Material.NoActionBar">
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+        <item name="android:windowBackground">@android:color/black</item>
+    </style>
+</resources>

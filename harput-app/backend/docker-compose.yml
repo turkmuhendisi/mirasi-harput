@@ -13,8 +13,8 @@ services:
     volumes:
       # Üretilen sertifikalar konteyner yeniden başlasa da kalır
       - ./storage/certificates:/var/www/html/storage/certificates
-      # Sunucuya sonradan eklenen font dosyaları için (opsiyonel)
-      - ./assets/fonts:/var/www/html/assets/fonts:ro
+      # Şablon + font dosyaları sunucudan (rebuild gerektirmez)
+      - ./assets:/var/www/html/assets:ro
     networks:
       - mirasiharput-net
 

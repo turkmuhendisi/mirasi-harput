@@ -29,6 +29,12 @@ final class Database
             PDO::ATTR_EMULATE_PREPARES => false,
         ]);
 
+        try {
+            Schema::ensureTables(self::$connection);
+        } catch (\Throwable $e) {
+            error_log('[schema] ensureTables failed: ' . $e->getMessage());
+        }
+
         return self::$connection;
     }
 }

@@ -1,0 +1,25 @@
+*.iml
+.gradle
+local.properties
+secrets.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+*.apk
+*.ap_
+*.aab
+
+# Android imzalama anahtarları
+*.keystore
+*.jks
+
+# Backend hassas dosyalar
+backend/.env
+backend/.env.*
+!backend/.env.example
+backend/vendor/
+backend/storage/certificates/*.png
+!backend/storage/certificates/.gitkeep

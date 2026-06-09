@@ -20,6 +20,14 @@ class CertificateRepository {
         val client = OkHttpClient.Builder()
             .connectTimeout(20, TimeUnit.SECONDS)
             .readTimeout(30, TimeUnit.SECONDS)
+            .addInterceptor { chain ->
+                val request = chain.request().newBuilder().apply {
+                    if (ApiConfig.API_KEY.isNotBlank()) {
+                        addHeader("X-Api-Key", ApiConfig.API_KEY)
+                    }
+                }.build()
+                chain.proceed(request)
+            }
             .addInterceptor(logging)
             .build()
 

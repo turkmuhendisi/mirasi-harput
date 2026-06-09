@@ -2,6 +2,10 @@
 
 use MirasiHarput\Env;
 
+// API yanıtlarında PHP uyarıları JSON'u bozmasın
+ini_set('display_errors', '0');
+error_reporting(E_ALL);
+
 $backendRoot = dirname(__DIR__);
 
 // PSR-4 autoloader (composer yoksa da çalışır)

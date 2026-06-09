@@ -27,10 +27,10 @@ if (!is_array($data)) {
 }
 
 // Opsiyonel API anahtarı kontrolü
-$expectedKey = Env::get('API_KEY');
-if ($expectedKey !== null && $expectedKey !== '') {
-    $providedKey = $_SERVER['HTTP_X_API_KEY'] ?? ($data['apiKey'] ?? '');
-    if (!hash_equals($expectedKey, (string) $providedKey)) {
+$expectedKey = trim((string) (Env::get('API_KEY') ?? ''));
+if ($expectedKey !== '') {
+    $providedKey = trim((string) ($_SERVER['HTTP_X_API_KEY'] ?? ($data['apiKey'] ?? '')));
+    if ($providedKey === '' || !hash_equals($expectedKey, $providedKey)) {
         respond(401, ['success' => false, 'message' => 'Yetkisiz istek.']);
     }
 }
