@@ -1,5 +1,6 @@
 R_DEF: Internal format may change without notice
 local
+color ic_launcher_background
 drawable certificate_preview
 drawable ic_launcher_foreground
 drawable ic_notification_media
@@ -7,6 +8,7 @@ drawable ic_notification_pause
 drawable ic_notification_play
 drawable ic_notification_stop
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 string app_name
 string notification_action_pause

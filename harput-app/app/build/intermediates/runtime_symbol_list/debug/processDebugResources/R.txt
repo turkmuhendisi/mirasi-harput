@@ -393,6 +393,7 @@ int color foreground_material_dark 0x7f05003c
 int color foreground_material_light 0x7f05003d
 int color highlighted_text_material_dark 0x7f05003e
 int color highlighted_text_material_light 0x7f05003f
+int color ic_launcher_background 0x7f050067
 int color material_blue_grey_800 0x7f050040
 int color material_blue_grey_900 0x7f050041
 int color material_blue_grey_950 0x7f050042
@@ -964,6 +965,7 @@ int layout select_dialog_multichoice_material 0x7f0b002f
 int layout select_dialog_singlechoice_material 0x7f0b0030
 int layout support_simple_spinner_dropdown_item 0x7f0b0031
 int mipmap ic_launcher 0x7f0c0000
+int mipmap ic_launcher_foreground 0x7f0c0002
 int mipmap ic_launcher_round 0x7f0c0001
 int string abc_action_bar_home_description 0x7f0d0000
 int string abc_action_bar_up_description 0x7f0d0001
