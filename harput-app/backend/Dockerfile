@@ -17,6 +17,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY docker/apache-vhost.conf /etc/apache2/sites-available/000-default.conf
+COPY docker/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
 
 WORKDIR /var/www/html
 
@@ -28,6 +29,10 @@ COPY sql ./sql
 COPY composer.json ./
 
 RUN mkdir -p storage/certificates \
-    && chown -R www-data:www-data storage
+    && chown -R www-data:www-data storage \
+    && chmod +x /usr/local/bin/docker-entrypoint.sh
 
 EXPOSE 80
+
+ENTRYPOINT ["docker-entrypoint.sh"]
+CMD ["apache2-foreground"]

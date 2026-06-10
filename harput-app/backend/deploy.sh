@@ -22,6 +22,10 @@ else
   echo "==> Git deposu yok, pull atlanıyor (manuel kopya?)"
 fi
 
+echo "==> Storage klasörü izinleri..."
+mkdir -p "$SCRIPT_DIR/storage/certificates"
+chmod -R 775 "$SCRIPT_DIR/storage" 2>/dev/null || true
+
 echo "==> Docker build & start (port 8087)..."
 cd "$SCRIPT_DIR"
 

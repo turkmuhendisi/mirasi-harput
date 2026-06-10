@@ -62,19 +62,43 @@ final class CertificateGenerator
         $this->centeredText($image, $fontRegular, 14, (int) ($height * 0.82), $dark, $dateText, $centerX);
         $this->centeredText($image, $fontRegular, 12, (int) ($height * 0.87), $dark, 'Belge No: ' . $certificateCode, $centerX);
 
-        $outputDir = $this->resolve('storage/certificates');
-        if (!is_dir($outputDir)) {
-            @mkdir($outputDir, 0775, true);
-        }
+        $outputDir = $this->ensureWritableOutputDir();
         $outputPath = $outputDir . '/' . $certificateCode . '.png';
 
-        if (!imagepng($image, $outputPath)) {
-            imagedestroy($image);
-            throw new \RuntimeException('Sertifika dosyası kaydedilemedi.');
+        $saved = @imagepng($image, $outputPath);
+        imagedestroy($image);
+
+        if (!$saved || !is_readable($outputPath)) {
+            $writable = is_writable($outputDir) ? 'yes' : 'no';
+            throw new \RuntimeException(
+                "Sertifika dosyası kaydedilemedi: {$outputPath} (dir_writable={$writable})"
+            );
         }
 
-        imagedestroy($image);
         return $outputPath;
+    }
+
+    private function ensureWritableOutputDir(): string
+    {
+        $outputDir = $this->resolve('storage/certificates');
+
+        if (!is_dir($outputDir)) {
+            if (!@mkdir($outputDir, 0775, true) && !is_dir($outputDir)) {
+                throw new \RuntimeException("Sertifika klasörü oluşturulamadı: {$outputDir}");
+            }
+        }
+
+        if (!is_writable($outputDir)) {
+            @chmod($outputDir, 0775);
+        }
+
+        if (!is_writable($outputDir)) {
+            throw new \RuntimeException(
+                "Sertifika klasörüne yazılamıyor: {$outputDir}. Sunucuda: chmod 775 storage/certificates"
+            );
+        }
+
+        return $outputDir;
     }
 
     private function centeredText($image, string $fontPath, int $size, int $y, int $color, string $text, int $centerX): void
