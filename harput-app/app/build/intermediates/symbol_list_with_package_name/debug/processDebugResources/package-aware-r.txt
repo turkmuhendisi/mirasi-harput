@@ -687,6 +687,7 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
+drawable sceneview_fit_to_scan
 drawable test_level_drawable
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -696,6 +697,9 @@ id FUNCTION
 id META
 id SHIFT
 id SYM
+id __arcore_cancelButton
+id __arcore_continueButton
+id __arcore_messageText
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
 id accessibility_custom_action_1
@@ -869,11 +873,13 @@ id tag_accessibility_actions
 id tag_accessibility_clickable_spans
 id tag_accessibility_heading
 id tag_accessibility_pane_title
+id tag_compat_insets_dispatch
 id tag_on_apply_window_listener
 id tag_on_receive_content_listener
 id tag_on_receive_content_mime_types
 id tag_screen_reader_focusable
 id tag_state_description
+id tag_system_bar_state_monitor
 id tag_transition_group
 id tag_unhandled_key_event_manager
 id tag_unhandled_key_listeners
@@ -892,6 +898,7 @@ id unchecked
 id uniform
 id up
 id useLogo
+id view_tree_disjoint_parent
 id view_tree_lifecycle_owner
 id view_tree_on_back_pressed_dispatcher_owner
 id view_tree_saved_state_registry_owner
@@ -915,6 +922,7 @@ interpolator btn_checkbox_unchecked_mtrl_animation_interpolator_1
 interpolator btn_radio_to_off_mtrl_animation_interpolator_0
 interpolator btn_radio_to_on_mtrl_animation_interpolator_0
 interpolator fast_out_slow_in
+layout __arcore_education
 layout abc_action_bar_title_item
 layout abc_action_bar_up_container
 layout abc_action_menu_item_layout
@@ -968,6 +976,12 @@ layout support_simple_spinner_dropdown_item
 mipmap ic_launcher
 mipmap ic_launcher_foreground
 mipmap ic_launcher_round
+raw keep_arcore
+string __arcore_cancel
+string __arcore_continue
+string __arcore_install_app
+string __arcore_install_feature
+string __arcore_installing
 string abc_action_bar_home_description
 string abc_action_bar_up_description
 string abc_action_menu_overflow_description
@@ -1099,6 +1113,15 @@ string notification_default_title
 string notification_playing
 string range_end
 string range_start
+string sceneview_bad_state_message
+string sceneview_camera_permission_required
+string sceneview_camera_unavailable_message
+string sceneview_excessive_motion_message
+string sceneview_insufficient_features_message
+string sceneview_insufficient_light_android_s_message
+string sceneview_insufficient_light_message
+string sceneview_tap_on_surface
+string sceneview_unknown_tracking_failure
 string search_menu_title
 string selected
 string state_empty

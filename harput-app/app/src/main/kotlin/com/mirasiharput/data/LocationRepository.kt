@@ -25,7 +25,7 @@ object LocationRepository {
                     "Bugün burada gördüğünüz taşlar, geçmişten bugüne uzanan uzun bir hikâyenin sessiz tanıklarıdır.",
             modelTransform = ModelTransform(
                 scale = 0.8f,
-                rotationY = 180f,
+                rotationY = 0f,
                 positionZ = -2.0f,
             ),
         ),
@@ -48,7 +48,7 @@ object LocationRepository {
                     "Bugün burada, Harput'un hem savunma gücünü hem de yer altında gizlenen tarihini keşfediyorsunuz.",
             modelTransform = ModelTransform(
                 scale = 0.8f,
-                rotationY = 200f,
+                rotationY = 0f,
                 positionZ = -2.0f,
             ),
         ),

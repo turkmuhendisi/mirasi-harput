@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.mirasiharput.app-mergeDebugResources-67:/values-v17/values-v17.xml",
+            "outputFile": "com.mirasiharput.app-mergeDebugResources-2:/values-v17/values-v17.xml",
             "map": [
                 {
-                    "source": "/Users/turkmuhendisi/.gradle/caches/8.9/transforms/be570823ded68f55a401ec063ad77bb6/transformed/appcompat-1.6.1/res/values-v17/values-v17.xml",
+                    "source": "/private/var/folders/cq/z2h5076j2x90r45h693q2j800000gn/T/cursor-sandbox-cache/62312621033bef8a6b93083dbba26805/gradle/caches/8.9/transforms/bb3396f347add2160f41faf9056459aa/transformed/appcompat-1.7.0/res/values-v17/values-v17.xml",
                     "from": {
                         "startLines": "2,5,9,12,15,18,22,25,29,33,37,40,43,46,50,53,57",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

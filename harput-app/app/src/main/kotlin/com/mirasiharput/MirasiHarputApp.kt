@@ -15,6 +15,7 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.mirasiharput.features.arExperience.ARExperienceScreen
 import com.mirasiharput.features.certificate.CertificateClaimScreen
 import com.mirasiharput.features.home.HomeScreen
 import com.mirasiharput.features.locationExperience.LocationExperienceScreen
@@ -35,6 +36,9 @@ fun MirasiHarputApp(
         val visitedLocations by viewModel.visitedLocations.collectAsState()
         val certificateEarned by viewModel.certificateEarned.collectAsState()
         val certificateUiState by viewModel.certificateUiState.collectAsState()
+        val totalPoints by viewModel.totalPoints.collectAsState()
+        val earnedBadgeIds by viewModel.earnedBadgeIds.collectAsState()
+        val quizAward by viewModel.quizAward.collectAsState()
         val snackbarHostState = remember { SnackbarHostState() }
 
         LaunchedEffect(toastMessage) {
@@ -66,6 +70,8 @@ fun MirasiHarputApp(
                     HomeScreen(
                         visitedLocationIds = visitedLocations,
                         certificateEarned = certificateEarned,
+                        totalPoints = totalPoints,
+                        earnedBadgeIds = earnedBadgeIds,
                         onStartExploring = viewModel::startExploring,
                         onClaimCertificate = viewModel::openCertificateClaim,
                         modifier = screenModifier,
@@ -89,6 +95,21 @@ fun MirasiHarputApp(
                         onBack = viewModel::returnToQrReader,
                         onAudioToggle = viewModel::toggleAudio,
                         onModelLoadFailed = viewModel::onModelLoadFailed,
+                        onOpenArExperience = viewModel::openArExperience,
+                        modifier = screenModifier,
+                    )
+                }
+
+                is AppExperienceState.ArExperience -> {
+                    BackHandler { viewModel.exitArExperience() }
+                    ARExperienceScreen(
+                        location = state.location,
+                        quizAward = quizAward,
+                        onCompleteQuiz = viewModel::completeQuiz,
+                        onRestartQuiz = viewModel::clearQuizAward,
+                        onModelLoadFailed = viewModel::onModelLoadFailed,
+                        onSessionFailed = viewModel::onArSessionFailed,
+                        onBack = viewModel::exitArExperience,
                         modifier = screenModifier,
                     )
                 }

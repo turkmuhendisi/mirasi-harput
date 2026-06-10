@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.mirasiharput.app-mergeDebugResources-2:/values-gsw/values-gsw.xml",
+            "map": [
+                {
+                    "source": "/private/var/folders/cq/z2h5076j2x90r45h693q2j800000gn/T/cursor-sandbox-cache/62312621033bef8a6b93083dbba26805/gradle/caches/8.9/transforms/67a863b2491b584252cfec456ede0766/transformed/core-1.48.0/res/values-gsw/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "191,241,290,424,561",
+                        "endColumns": "49,48,133,136,90",
+                        "endOffsets": "240,289,423,560,651"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,109,162,300,441",
+                        "endColumns": "53,52,137,140,94",
+                        "endOffsets": "104,157,295,436,531"
+                    }
+                }
+            ]
+        }
+    ]
+}

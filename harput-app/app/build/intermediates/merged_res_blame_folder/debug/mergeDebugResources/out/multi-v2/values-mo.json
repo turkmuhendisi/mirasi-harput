@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.mirasiharput.app-mergeDebugResources-2:/values-mo/values-mo.xml",
+            "map": [
+                {
+                    "source": "/private/var/folders/cq/z2h5076j2x90r45h693q2j800000gn/T/cursor-sandbox-cache/62312621033bef8a6b93083dbba26805/gradle/caches/8.9/transforms/67a863b2491b584252cfec456ede0766/transformed/core-1.48.0/res/values-mo/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "190,238,291,433,577",
+                        "endColumns": "47,52,141,143,107",
+                        "endOffsets": "237,290,432,576,684"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,107,164,310,458",
+                        "endColumns": "51,56,145,147,111",
+                        "endOffsets": "102,159,305,453,565"
+                    }
+                }
+            ]
+        }
+    ]
+}

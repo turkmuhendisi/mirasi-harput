@@ -32,8 +32,14 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.foundation.layout.FlowRow
+import androidx.compose.foundation.layout.ExperimentalLayoutApi
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.background
 import com.mirasiharput.R
 import com.mirasiharput.data.LocationRepository
+import com.mirasiharput.data.achievements.BadgeCatalog
+import com.mirasiharput.ui.theme.HeritageGoldSoft
 import com.mirasiharput.ui.components.HeritageBackground
 import com.mirasiharput.ui.components.HeritagePrimaryButton
 import com.mirasiharput.ui.components.HeritageSecondaryButton
@@ -48,6 +54,8 @@ import com.mirasiharput.ui.theme.ParchmentLight
 fun HomeScreen(
     visitedLocationIds: Set<String>,
     certificateEarned: Boolean,
+    totalPoints: Int,
+    earnedBadgeIds: Set<String>,
     onStartExploring: () -> Unit,
     onClaimCertificate: () -> Unit,
     modifier: Modifier = Modifier,
@@ -102,6 +110,14 @@ fun HomeScreen(
             ProgressCard(visitedLocationIds = visitedLocationIds)
 
             Spacer(modifier = Modifier.height(20.dp))
+
+            if (totalPoints > 0 || earnedBadgeIds.isNotEmpty()) {
+                AchievementsCard(
+                    totalPoints = totalPoints,
+                    earnedBadgeIds = earnedBadgeIds,
+                )
+                Spacer(modifier = Modifier.height(20.dp))
+            }
 
             if (certificateEarned) {
                 RewardCard(onClaimCertificate = onClaimCertificate)
@@ -169,6 +185,88 @@ private fun ProgressCard(visitedLocationIds: Set<String>) {
                         fontWeight = if (visited) FontWeight.SemiBold else FontWeight.Normal,
                         color = HeritageBrown,
                     )
+                }
+            }
+        }
+    }
+}
+
+@OptIn(ExperimentalLayoutApi::class)
+@Composable
+private fun AchievementsCard(
+    totalPoints: Int,
+    earnedBadgeIds: Set<String>,
+) {
+    Card(
+        modifier = Modifier.fillMaxWidth(),
+        shape = RoundedCornerShape(20.dp),
+        colors = CardDefaults.cardColors(containerColor = ParchmentLight),
+        border = BorderStroke(1.dp, HeritageGold),
+    ) {
+        Column(modifier = Modifier.padding(20.dp)) {
+            Row(
+                modifier = Modifier.fillMaxWidth(),
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                Text(
+                    text = "Miras Puanı",
+                    fontFamily = FontFamily.Serif,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 18.sp,
+                    color = HeritageBrown,
+                    modifier = Modifier.weight(1f),
+                )
+                Text(
+                    text = "$totalPoints",
+                    fontFamily = FontFamily.Serif,
+                    fontWeight = FontWeight.Bold,
+                    fontSize = 22.sp,
+                    color = HeritageGold,
+                )
+            }
+
+            if (earnedBadgeIds.isNotEmpty()) {
+                Spacer(modifier = Modifier.height(12.dp))
+                Text(
+                    text = "Rozetler",
+                    fontFamily = FontFamily.Serif,
+                    fontWeight = FontWeight.SemiBold,
+                    fontSize = 15.sp,
+                    color = HeritageBrownSoft,
+                )
+                Spacer(modifier = Modifier.height(8.dp))
+                FlowRow {
+                    BadgeCatalog.all
+                        .filter { it.id in earnedBadgeIds }
+                        .forEach { badge ->
+                            Row(
+                                modifier = Modifier
+                                    .padding(end = 8.dp, bottom = 8.dp)
+                                    .background(
+                                        HeritageGoldSoft.copy(alpha = 0.25f),
+                                        RoundedCornerShape(20.dp),
+                                    )
+                                    .padding(horizontal = 12.dp, vertical = 6.dp),
+                                verticalAlignment = Alignment.CenterVertically,
+                            ) {
+                                Box(
+                                    modifier = Modifier
+                                        .size(22.dp)
+                                        .background(HeritageGoldSoft, CircleShape),
+                                    contentAlignment = Alignment.Center,
+                                ) {
+                                    Text(text = badge.emblem, fontSize = 12.sp)
+                                }
+                                Spacer(modifier = Modifier.size(6.dp))
+                                Text(
+                                    text = badge.title,
+                                    fontFamily = FontFamily.Serif,
+                                    fontWeight = FontWeight.SemiBold,
+                                    fontSize = 13.sp,
+                                    color = HeritageBrown,
+                                )
+                            }
+                        }
                 }
             }
         }

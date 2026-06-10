@@ -6,6 +6,8 @@ import androidx.lifecycle.viewModelScope
 import com.mirasiharput.data.LocationModel
 import com.mirasiharput.data.LocationRepository
 import com.mirasiharput.data.VisitProgressRepository
+import com.mirasiharput.data.achievements.AchievementRepository
+import com.mirasiharput.data.achievements.QuizAward
 import com.mirasiharput.features.certificate.CertificateRepository
 import com.mirasiharput.features.certificate.CertificateUiState
 import com.mirasiharput.features.qr.QRPayloadParser
@@ -26,6 +28,7 @@ class LocationExperienceViewModel(application: Application) : AndroidViewModel(a
     private val audioController = AudioController(application)
     private val visitProgressRepository = VisitProgressRepository(application)
     private val certificateRepository = CertificateRepository()
+    private val achievementRepository = AchievementRepository(application)
 
     private val _appState = MutableStateFlow<AppExperienceState>(AppExperienceState.Home)
     val appState: StateFlow<AppExperienceState> = _appState.asStateFlow()
@@ -42,6 +45,15 @@ class LocationExperienceViewModel(application: Application) : AndroidViewModel(a
     val certificateEarned: StateFlow<Boolean> = visitProgressRepository.visitedLocationIds
         .map { VisitProgressRepository.hasEarnedCertificate(it) }
         .stateIn(viewModelScope, SharingStarted.Eagerly, false)
+
+    val totalPoints: StateFlow<Int> = achievementRepository.totalPoints
+        .stateIn(viewModelScope, SharingStarted.Eagerly, 0)
+
+    val earnedBadgeIds: StateFlow<Set<String>> = achievementRepository.earnedBadgeIds
+        .stateIn(viewModelScope, SharingStarted.Eagerly, emptySet())
+
+    private val _quizAward = MutableStateFlow<QuizAward?>(null)
+    val quizAward: StateFlow<QuizAward?> = _quizAward.asStateFlow()
 
     init {
         audioController.isPlaying
@@ -93,6 +105,39 @@ class LocationExperienceViewModel(application: Application) : AndroidViewModel(a
     fun returnToQrReader() {
         audioController.release()
         _appState.value = AppExperienceState.QrReader
+    }
+
+    // --- AR Deneyimi ---
+
+    fun openArExperience() {
+        val current = _appState.value as? AppExperienceState.LocationExperience ?: return
+        audioController.release()
+        _quizAward.value = null
+        _appState.value = AppExperienceState.ArExperience(location = current.location)
+    }
+
+    fun exitArExperience() {
+        val current = _appState.value as? AppExperienceState.ArExperience ?: return
+        _quizAward.value = null
+        _appState.value = AppExperienceState.LocationExperience(
+            location = current.location,
+            isAudioActive = false,
+        )
+    }
+
+    fun onArSessionFailed() {
+        showToast("AR oturumu başlatılamadı. Cihazınız ARCore desteklemiyor olabilir.")
+        exitArExperience()
+    }
+
+    fun completeQuiz(locationId: String, correctCount: Int) {
+        viewModelScope.launch {
+            _quizAward.value = achievementRepository.recordQuizResult(locationId, correctCount)
+        }
+    }
+
+    fun clearQuizAward() {
+        _quizAward.value = null
     }
 
     // --- Audio ---

@@ -51,6 +51,9 @@ fun ARModelViewer(
                 )
                 sceneView.applyRotation(transform, userRotationY)
             },
+            onRelease = { sceneView ->
+                runCatching { sceneView.destroy() }
+            },
         )
 
         Box(

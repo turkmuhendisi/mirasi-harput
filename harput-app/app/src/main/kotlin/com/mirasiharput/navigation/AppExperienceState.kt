@@ -12,5 +12,9 @@ sealed interface AppExperienceState {
         val isAudioActive: Boolean = false,
     ) : AppExperienceState
 
+    data class ArExperience(
+        val location: LocationModel,
+    ) : AppExperienceState
+
     data object CertificateClaim : AppExperienceState
 }

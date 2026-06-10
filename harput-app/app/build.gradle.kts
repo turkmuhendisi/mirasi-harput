@@ -78,6 +78,8 @@ dependencies {
 
     // 2.3.0+ ships Filament native libs with 16 KB ELF alignment (Play requirement).
     implementation("io.github.sceneview:sceneview:2.3.0")
+    // ARCore destekli sahne (zemin algılama + tıkla-yerleştir AR deneyimi).
+    implementation("io.github.sceneview:arsceneview:2.3.0")
 
     implementation("androidx.datastore:datastore-preferences:1.1.1")
 
