@@ -1,9 +1,16 @@
-Bu klasöre Türkçe karakter destekleyen bir TTF font yükleyin.
+DejaVu Sans fontları — Türkçe sertifika metinleri için.
 
-Önerilen: DejaVuSans.ttf ve DejaVuSans-Bold.ttf
-İndirme: https://dejavu-fonts.github.io/
+Otomatik indirme (önerilen):
+  cd backend
+  ./scripts/download-fonts.sh
 
-Dosya adlarını .env içindeki CERT_FONT_REGULAR ve CERT_FONT_BOLD ile eşleştirin.
-Örnek:
-  CERT_FONT_REGULAR=assets/fonts/DejaVuSans.ttf
-  CERT_FONT_BOLD=assets/fonts/DejaVuSans-Bold.ttf
+veya deploy sırasında otomatik:
+  ./deploy.sh
+
+Manuel: https://dejavu-fonts.github.io/ adresinden
+  DejaVuSans.ttf
+  DejaVuSans-Bold.ttf
+dosyalarını bu klasöre koyun.
+
+Docker: docker-compose.yml assets/ klasörünü volume ile bağlar;
+fontlar sunucudaki backend/assets/fonts/ yolundan okunur.

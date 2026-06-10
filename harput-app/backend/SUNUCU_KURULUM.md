@@ -57,9 +57,9 @@ nano .env
 ### 2) Font dosyaları (önerilir)
 
 ```bash
-# /opt/mirasi-harput/harput-app/backend/assets/fonts/
-DejaVuSans.ttf
-DejaVuSans-Bold.ttf
+cd /opt/mirasi-harput/harput-app/backend
+./scripts/download-fonts.sh
+# deploy.sh çalıştırırsanız fontlar yoksa otomatik indirilir
 ```
 
 ### 3) Hostinger (bir kez)

@@ -39,7 +39,7 @@ cp .env.example .env
 nano .env   # DB, SMTP, API_KEY bilgilerini doldurun
 ```
 
-**Font (Türkçe sertifika için):** `assets/fonts/` içine `DejaVuSans.ttf` ve `DejaVuSans-Bold.ttf` yükleyin.
+**Font (Türkçe sertifika için):** `./scripts/download-fonts.sh` çalıştırın (veya `deploy.sh` bunu otomatik yapar). Manuel yükleme: `assets/fonts/DejaVuSans.ttf` ve `DejaVuSans-Bold.ttf`.
 
 ### 4) Veritabanı tablosu
 

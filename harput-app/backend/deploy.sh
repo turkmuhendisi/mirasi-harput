@@ -22,6 +22,11 @@ else
   echo "==> Git deposu yok, pull atlanıyor (manuel kopya?)"
 fi
 
+echo "==> Fontlar (yoksa indirilir)..."
+if [ -x "$SCRIPT_DIR/scripts/download-fonts.sh" ]; then
+  "$SCRIPT_DIR/scripts/download-fonts.sh"
+fi
+
 echo "==> Storage klasörü izinleri..."
 mkdir -p "$SCRIPT_DIR/storage/certificates"
 chmod -R 775 "$SCRIPT_DIR/storage" 2>/dev/null || true
